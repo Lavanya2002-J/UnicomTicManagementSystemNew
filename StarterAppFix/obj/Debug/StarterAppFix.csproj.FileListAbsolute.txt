@@ -1,0 +1,15 @@
+C:\UnicomTicManagementSystem\StarterAppFix\obj\Debug\StarterAppFix.csproj.AssemblyReference.cache
+C:\UnicomTicManagementSystem\StarterAppFix\obj\Debug\StarterAppFix.Properties.Resources.resources
+C:\UnicomTicManagementSystem\StarterAppFix\obj\Debug\StarterAppFix.csproj.GenerateResource.cache
+C:\UnicomTicManagementSystem\StarterAppFix\obj\Debug\StarterAppFix.csproj.CoreCompileInputs.cache
+C:\UnicomTicManagementSystem\StarterAppFix\bin\Debug\StarterAppFix.exe.config
+C:\UnicomTicManagementSystem\StarterAppFix\bin\Debug\StarterAppFix.exe
+C:\UnicomTicManagementSystem\StarterAppFix\bin\Debug\StarterAppFix.pdb
+C:\UnicomTicManagementSystem\StarterAppFix\bin\Debug\UnicomTicManagementSystem.exe
+C:\UnicomTicManagementSystem\StarterAppFix\bin\Debug\System.Data.SQLite.dll
+C:\UnicomTicManagementSystem\StarterAppFix\bin\Debug\UnicomTicManagementSystem.pdb
+C:\UnicomTicManagementSystem\StarterAppFix\bin\Debug\UnicomTicManagementSystem.exe.config
+C:\UnicomTicManagementSystem\StarterAppFix\bin\Debug\System.Data.SQLite.xml
+C:\UnicomTicManagementSystem\StarterAppFix\obj\Debug\StarterA.B0777430.Up2Date
+C:\UnicomTicManagementSystem\StarterAppFix\obj\Debug\StarterAppFix.exe
+C:\UnicomTicManagementSystem\StarterAppFix\obj\Debug\StarterAppFix.pdb
