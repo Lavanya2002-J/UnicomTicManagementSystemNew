@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnicomTicManagementSystem.Controllers;
 using UnicomTicManagementSystem.Models;
-using UnicomTICManagementSystem.Repositories;
+using UnicomTicManagementSystem.Repositories;
 
 namespace UnicomTicManagementSystem.Views
 {
@@ -23,6 +23,7 @@ namespace UnicomTicManagementSystem.Views
         public CoursesForm()
         {
             InitializeComponent();
+            this.Load += CourseForm_Load;
         }
 
         private void CourseForm_Load(object sender, EventArgs e)
@@ -30,35 +31,15 @@ namespace UnicomTicManagementSystem.Views
             LoadCourses();
         }
         private void LoadCourses()
-        {
-            dataGridViewCourses.DataSource = null;
+        {   var courses = controller.GetCourses();
+ 
+            dataGridViewCourses.AutoGenerateColumns = true;
             dataGridViewCourses.DataSource = controller.GetCourses();
 
         }
 
         
-     
-      
-
-        private void button1_Click(object sender, EventArgs e)
-        
-        {
-            if (dataGridViewCourses.SelectedRows.Count > 0)
-            {
-                DataGridViewRow row = dataGridViewCourses.SelectedRows[0];
-                selectedCourseId = Convert.ToInt32(row.Cells["CourseID"].Value);
-                txtCourseName.Text = row.Cells["CourseName"].Value.ToString();
-                
-            }
-            else
-            {
-                MessageBox.Show("Please select a course from the list to view.");
-            }
-
-        }
-        
-
-        private void btnDelete_Click(object sender, EventArgs e)
+     private void btnDelete_Click(object sender, EventArgs e)
         {
 
             if (selectedCourseId <= 0)
@@ -122,9 +103,19 @@ namespace UnicomTicManagementSystem.Views
             selectedCourseId = -1;
             }
 
+        private void btnViewCourse_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewCourses.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dataGridViewCourses.CurrentRow;
+                selectedCourseId = Convert.ToInt32(row.Cells[0].Value);
+                txtCourseName.Text = row.Cells[1].Value.ToString();
 
+            }
+            else
+            {
+                MessageBox.Show("Please select a course from the list to view.");
+            }
         }
-
-    
-    
+    }    
 }

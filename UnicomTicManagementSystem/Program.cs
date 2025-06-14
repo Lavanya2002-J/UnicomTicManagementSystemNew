@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnicomTicManagementSystem.Views;
-using UnicomTICManagementSystem.Repositories;
+using UnicomTicManagementSystem.Repositories;
 
 
 namespace UnicomTicManagementSystem
@@ -19,7 +19,7 @@ namespace UnicomTicManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            DatabaseManager.InitializeDatabase();
+            Migration.InitializeDatabase();
             Application.Run(new LoginForm());
         }
     }

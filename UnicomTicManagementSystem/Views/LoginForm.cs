@@ -59,5 +59,15 @@ namespace UnicomTicManagementSystem.Views
         {
 
         }
+
+        private void panelLogin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelLeft_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

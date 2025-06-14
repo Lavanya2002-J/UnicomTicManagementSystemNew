@@ -42,13 +42,17 @@
             // 
             // dataGridViewCourses
             // 
+            this.dataGridViewCourses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCourses.Location = new System.Drawing.Point(354, 129);
+            this.dataGridViewCourses.Location = new System.Drawing.Point(314, 129);
             this.dataGridViewCourses.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewCourses.MultiSelect = false;
             this.dataGridViewCourses.Name = "dataGridViewCourses";
+            this.dataGridViewCourses.ReadOnly = true;
             this.dataGridViewCourses.RowHeadersWidth = 62;
             this.dataGridViewCourses.RowTemplate.Height = 28;
-            this.dataGridViewCourses.Size = new System.Drawing.Size(320, 210);
+            this.dataGridViewCourses.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewCourses.Size = new System.Drawing.Size(393, 257);
             this.dataGridViewCourses.TabIndex = 0;
             // 
             // btnAddCourse
@@ -92,7 +96,7 @@
             this.btnViewCourse.TabIndex = 4;
             this.btnViewCourse.Text = "ViewCourse";
             this.btnViewCourse.UseVisualStyleBackColor = true;
-            this.btnViewCourse.Click += new System.EventHandler(this.button1_Click);
+            this.btnViewCourse.Click += new System.EventHandler(this.btnViewCourse_Click);
             // 
             // txtCourseName
             // 

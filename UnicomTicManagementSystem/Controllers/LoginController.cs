@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
-using UnicomTICManagementSystem.Repositories;
+using UnicomTicManagementSystem.Repositories;
 
 namespace UnicomTICManagementSystem.Controllers
 {
@@ -16,7 +16,7 @@ namespace UnicomTICManagementSystem.Controllers
             try
             {
                 // Connect to the SQLite database
-                using (var connection = DatabaseManager.GetConnection())
+                using (var connection = DataConfig.GetConnection())
                 {
                     connection.Open();
 
