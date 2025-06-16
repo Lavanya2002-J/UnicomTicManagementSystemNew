@@ -6,6 +6,6 @@
     "\\UnicomTicManagementSystem\\Models",
     "\\UnicomTicManagementSystem\\Views"
   ],
-  "SelectedNode": "\\UnicomTicManagementSystem\\Views\\CoursesForm.cs",
+  "SelectedNode": "\\UnicomTicManagementSystem\\Controllers\\LoginController.cs",
   "PreviewInSolutionExplorer": false
 }

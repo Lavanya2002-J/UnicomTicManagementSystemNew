@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UnicomTicManagementSystem.Views
 {
-    public partial class TimetablesForm : Form
+    public partial class LecturerDashboard : Form
     {
-        public TimetablesForm()
+        public LecturerDashboard()
         {
             InitializeComponent();
         }

@@ -69,5 +69,34 @@ namespace UnicomTicManagementSystem.Views
                 this.Hide();
             }
         }
+
+        private void btnViewExam_Click(object sender, EventArgs e)
+        {
+            ExamForm examForm = new ExamForm();
+            examForm.Show();
+            this.Hide();
+
+        }
+
+        private void btnViewMarks_Click(object sender, EventArgs e)
+        {
+            MarksForm marksForm = new MarksForm();
+            marksForm.Show();
+            this.Hide();
+        }
+
+        private void btnViewTimetable_Click(object sender, EventArgs e)
+        {
+            TimetableForm timetableForm = new TimetableForm();  
+            timetableForm.Show();
+            this.Hide();
+        }
+
+        private void btnViewRooms_Click(object sender, EventArgs e)
+        {
+            RoomsForm roomsForm = new RoomsForm();
+            roomsForm.Show();
+            this.Hide();
+        }
     }
 }

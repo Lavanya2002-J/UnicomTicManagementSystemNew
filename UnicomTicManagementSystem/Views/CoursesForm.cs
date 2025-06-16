@@ -117,5 +117,11 @@ namespace UnicomTicManagementSystem.Views
                 MessageBox.Show("Please select a course from the list to view.");
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new LoginForm().Show();
+        }
     }    
 }

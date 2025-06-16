@@ -19,6 +19,11 @@ C:\UnicomTicManagementSystem\UnicomTicManagementSystem\obj\Debug\UnicomTicManage
 C:\UnicomTicManagementSystem\UnicomTicManagementSystem\obj\Debug\UnicomTi.5B6226AA.Up2Date
 C:\UnicomTicManagementSystem\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.exe
 C:\UnicomTicManagementSystem\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.pdb
-C:\UnicomTicManagementSystem\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.exe.config
 C:\UnicomTicManagementSystem\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.SubjectsForm.resources
 C:\UnicomTicManagementSystem\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StudentsForm.resources
+C:\UnicomTicManagementSystem\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.ExamForm.resources
+C:\UnicomTicManagementSystem\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.MarksForm.resources
+C:\UnicomTicManagementSystem\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.TimetableForm.resources
+C:\UnicomTicManagementSystem\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.exe.config
+C:\UnicomTicManagementSystem\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.RoomsForm.resources
+C:\UnicomTicManagementSystem\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StudentDashboard.resources

@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using UnicomTICManagementSystem.Controllers;
 using UnicomTicManagementSystem.Views;
+using UnicomTICManagementSystem.Controllers;
 
 namespace UnicomTicManagementSystem.Views
 {
@@ -21,37 +22,49 @@ namespace UnicomTicManagementSystem.Views
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // Get what the user typed in
-            string username = textUsername.Text.Trim();      // Get username
-            string password = txtPassword.Text.Trim();      // Get password
-            string role = cmRole.SelectedItem?.ToString(); // Get selected role
+            string username = textUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
-            // Check if any field is empty
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(role))
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("Please fill in all the fields before logging in.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Stop here, don’t check login if something is missing
+                MessageBox.Show("Please enter both username and password.");
+                return;
             }
 
-            // Ask the LoginController to check if the user is valid
-            bool isValid = LoginController.ValidateLogin(username, password, role);
-
-            if (isValid)
+            using (var connection = new SQLiteConnection("Data Source=unicomtic.db;Version=3;"))
             {
-                // If valid, show a welcome message
-                MessageBox.Show($"Login successful! Welcome, {role}.", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                connection.Open();
 
-                if (role == "Admin")
+                string query = "SELECT Role FROM Users WHERE Username = @username AND Password = @password";
+                SQLiteCommand cmd = new SQLiteCommand(query, connection);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+
+                var roleObj = cmd.ExecuteScalar();
+
+                if (roleObj != null)
                 {
-                    this.Hide(); // Hide this login form
-                    AdminDashboard adminDashboard = new AdminDashboard();   
-                    adminDashboard.Show();
+                    string role = roleObj.ToString();
+
+                    this.Hide();
+
+                    if (role == "Admin")
+                        new AdminDashboard().Show();
+                    else if (role == "Student")
+                        new StudentDashboard().Show();
+                    else if (role == "Lecturer")
+                        new LecturerDashboard().Show();
+                    else if (role == "Staff")
+                        new StaffDashboard().Show();
+                    else
+                        MessageBox.Show("Unknown role. Contact admin.");
                 }
-            }
-            else
-            {
-                // If invalid, show an error message
-                MessageBox.Show("Oops! The username, password, or role is incorrect.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    MessageBox.Show("Invalid username or password.");
+                }
+
+                connection.Close();
             }
         }
 
@@ -66,6 +79,11 @@ namespace UnicomTicManagementSystem.Views
         }
 
         private void panelLeft_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }

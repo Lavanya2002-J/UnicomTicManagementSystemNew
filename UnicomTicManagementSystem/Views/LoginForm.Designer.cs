@@ -47,7 +47,7 @@
             // textUsername
             // 
             this.textUsername.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.textUsername.Location = new System.Drawing.Point(457, 216);
+            this.textUsername.Location = new System.Drawing.Point(457, 133);
             this.textUsername.Margin = new System.Windows.Forms.Padding(4);
             this.textUsername.Name = "textUsername";
             this.textUsername.Size = new System.Drawing.Size(215, 34);
@@ -58,7 +58,7 @@
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(324, 279);
+            this.labelPassword.Location = new System.Drawing.Point(319, 205);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(106, 28);
@@ -67,7 +67,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(457, 279);
+            this.txtPassword.Location = new System.Drawing.Point(457, 199);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -78,7 +78,7 @@
             // 
             this.labelRole.AutoSize = true;
             this.labelRole.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRole.Location = new System.Drawing.Point(324, 357);
+            this.labelRole.Location = new System.Drawing.Point(324, 279);
             this.labelRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRole.Name = "labelRole";
             this.labelRole.Size = new System.Drawing.Size(59, 28);
@@ -94,7 +94,7 @@
             "Staff",
             "Student",
             "Lecturer"});
-            this.cmRole.Location = new System.Drawing.Point(457, 349);
+            this.cmRole.Location = new System.Drawing.Point(457, 276);
             this.cmRole.Margin = new System.Windows.Forms.Padding(4);
             this.cmRole.Name = "cmRole";
             this.cmRole.Size = new System.Drawing.Size(215, 36);
@@ -102,12 +102,13 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogin.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(528, 465);
+            this.btnLogin.Location = new System.Drawing.Point(517, 357);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(92, 44);
@@ -119,23 +120,25 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(160, 15);
+            this.label1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(481, 45);
+            this.label1.Size = new System.Drawing.Size(520, 48);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Welcome to UnicomTic System";
+            this.label1.Text = "Welcome to UnicomTic Portal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panelTop.BackColor = System.Drawing.Color.LightSlateGray;
             this.panelTop.Controls.Add(this.label1);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(978, 113);
+            this.panelTop.Size = new System.Drawing.Size(878, 74);
             this.panelTop.TabIndex = 1;
             // 
             // panelLeft
@@ -143,18 +146,20 @@
             this.panelLeft.BackColor = System.Drawing.Color.LightSlateGray;
             this.panelLeft.Controls.Add(this.pictureLogo);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 113);
+            this.panelLeft.Location = new System.Drawing.Point(0, 74);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(267, 517);
+            this.panelLeft.Size = new System.Drawing.Size(267, 370);
             this.panelLeft.TabIndex = 2;
             this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeft_Paint);
             // 
             // pictureLogo
             // 
+            this.pictureLogo.BackColor = System.Drawing.Color.LightSlateGray;
+            this.pictureLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureLogo.Image = global::UnicomTicManagementSystem.Properties.Resources.UNICOM_TIC_LOGO_2048x773;
-            this.pictureLogo.Location = new System.Drawing.Point(3, 23);
+            this.pictureLogo.Location = new System.Drawing.Point(0, 0);
             this.pictureLogo.Name = "pictureLogo";
-            this.pictureLogo.Size = new System.Drawing.Size(245, 296);
+            this.pictureLogo.Size = new System.Drawing.Size(267, 370);
             this.pictureLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureLogo.TabIndex = 0;
             this.pictureLogo.TabStop = false;
@@ -164,7 +169,7 @@
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsername.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelUsername.Location = new System.Drawing.Point(324, 216);
+            this.labelUsername.Location = new System.Drawing.Point(319, 139);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(111, 28);
@@ -175,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(978, 630);
+            this.ClientSize = new System.Drawing.Size(878, 444);
             this.Controls.Add(this.labelRole);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
@@ -186,11 +191,12 @@
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.btnLogin);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login _ UnicomTic Management System";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.panelLeft.ResumeLayout(false);

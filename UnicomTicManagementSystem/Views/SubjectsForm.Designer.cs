@@ -35,12 +35,14 @@
             this.btnEditSubjects = new System.Windows.Forms.Button();
             this.btnDeleteSubjects = new System.Windows.Forms.Button();
             this.btnBackSubjects = new System.Windows.Forms.Button();
+            this.labelSubject = new System.Windows.Forms.Label();
+            this.labelCourseName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSubjectName
             // 
-            this.txtSubjectName.Location = new System.Drawing.Point(264, 53);
+            this.txtSubjectName.Location = new System.Drawing.Point(341, 54);
             this.txtSubjectName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSubjectName.Name = "txtSubjectName";
             this.txtSubjectName.Size = new System.Drawing.Size(271, 34);
@@ -50,7 +52,7 @@
             // comboCourse
             // 
             this.comboCourse.FormattingEnabled = true;
-            this.comboCourse.Location = new System.Drawing.Point(264, 127);
+            this.comboCourse.Location = new System.Drawing.Point(341, 137);
             this.comboCourse.Name = "comboCourse";
             this.comboCourse.Size = new System.Drawing.Size(271, 36);
             this.comboCourse.TabIndex = 1;
@@ -60,7 +62,7 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(222, 219);
+            this.dataGridView1.Location = new System.Drawing.Point(341, 218);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -71,7 +73,7 @@
             // 
             // btnAddSubjects
             // 
-            this.btnAddSubjects.Location = new System.Drawing.Point(131, 537);
+            this.btnAddSubjects.Location = new System.Drawing.Point(157, 536);
             this.btnAddSubjects.Name = "btnAddSubjects";
             this.btnAddSubjects.Size = new System.Drawing.Size(98, 44);
             this.btnAddSubjects.TabIndex = 3;
@@ -81,7 +83,7 @@
             // 
             // btnEditSubjects
             // 
-            this.btnEditSubjects.Location = new System.Drawing.Point(309, 541);
+            this.btnEditSubjects.Location = new System.Drawing.Point(353, 540);
             this.btnEditSubjects.Name = "btnEditSubjects";
             this.btnEditSubjects.Size = new System.Drawing.Size(105, 37);
             this.btnEditSubjects.TabIndex = 4;
@@ -91,7 +93,7 @@
             // 
             // btnDeleteSubjects
             // 
-            this.btnDeleteSubjects.Location = new System.Drawing.Point(511, 541);
+            this.btnDeleteSubjects.Location = new System.Drawing.Point(559, 537);
             this.btnDeleteSubjects.Name = "btnDeleteSubjects";
             this.btnDeleteSubjects.Size = new System.Drawing.Size(107, 42);
             this.btnDeleteSubjects.TabIndex = 5;
@@ -101,7 +103,7 @@
             // 
             // btnBackSubjects
             // 
-            this.btnBackSubjects.Location = new System.Drawing.Point(702, 546);
+            this.btnBackSubjects.Location = new System.Drawing.Point(776, 537);
             this.btnBackSubjects.Name = "btnBackSubjects";
             this.btnBackSubjects.Size = new System.Drawing.Size(97, 37);
             this.btnBackSubjects.TabIndex = 6;
@@ -109,11 +111,31 @@
             this.btnBackSubjects.UseVisualStyleBackColor = true;
             this.btnBackSubjects.Click += new System.EventHandler(this.btnBackSubjects_Click);
             // 
+            // labelSubject
+            // 
+            this.labelSubject.AutoSize = true;
+            this.labelSubject.Location = new System.Drawing.Point(197, 60);
+            this.labelSubject.Name = "labelSubject";
+            this.labelSubject.Size = new System.Drawing.Size(87, 28);
+            this.labelSubject.TabIndex = 7;
+            this.labelSubject.Text = "Subject:";
+            // 
+            // labelCourseName
+            // 
+            this.labelCourseName.AutoSize = true;
+            this.labelCourseName.Location = new System.Drawing.Point(197, 140);
+            this.labelCourseName.Name = "labelCourseName";
+            this.labelCourseName.Size = new System.Drawing.Size(81, 28);
+            this.labelCourseName.TabIndex = 8;
+            this.labelCourseName.Text = "Course:";
+            // 
             // SubjectsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 630);
+            this.Controls.Add(this.labelCourseName);
+            this.Controls.Add(this.labelSubject);
             this.Controls.Add(this.btnBackSubjects);
             this.Controls.Add(this.btnDeleteSubjects);
             this.Controls.Add(this.btnEditSubjects);
@@ -141,5 +163,7 @@
         private System.Windows.Forms.Button btnEditSubjects;
         private System.Windows.Forms.Button btnDeleteSubjects;
         private System.Windows.Forms.Button btnBackSubjects;
+        private System.Windows.Forms.Label labelSubject;
+        private System.Windows.Forms.Label labelCourseName;
     }
 }

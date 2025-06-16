@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UnicomTicManagementSystem.Views
 {
-    public partial class ViewCourseForm : Form
+    public partial class ViewSubjectsForm : Form
     {
-        public ViewCourseForm()
+        public ViewSubjectsForm()
         {
             InitializeComponent();
         }
