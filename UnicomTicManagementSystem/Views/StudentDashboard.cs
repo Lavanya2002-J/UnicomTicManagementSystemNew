@@ -32,7 +32,8 @@ namespace UnicomTicManagementSystem.Views
 
         private void btnViewMarks_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            new StudentViewMarksForm().Show();
         }
 
         private void btnViewTimetable_Click(object sender, EventArgs e)

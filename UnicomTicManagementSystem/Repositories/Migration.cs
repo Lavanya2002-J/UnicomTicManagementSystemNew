@@ -78,7 +78,7 @@ namespace UnicomTicManagementSystem.Repositories
                     ExecuteCommand(roomsTable, connection);
                     ExecuteCommand(timetableTable, connection);
 
-                    connection.Close();
+                   
                 }
             }
 

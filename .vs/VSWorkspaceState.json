@@ -3,9 +3,8 @@
     "",
     "\\UnicomTicManagementSystem",
     "\\UnicomTicManagementSystem\\Controllers",
-    "\\UnicomTicManagementSystem\\Models",
     "\\UnicomTicManagementSystem\\Views"
   ],
-  "SelectedNode": "\\UnicomTicManagementSystem\\Controllers\\LoginController.cs",
+  "SelectedNode": "\\UnicomTicManagementSystem\\Controllers\\MarkController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -41,7 +41,7 @@
             // 
             // btnCourses
             // 
-            this.btnCourses.Location = new System.Drawing.Point(356, 89);
+            this.btnCourses.Location = new System.Drawing.Point(396, 84);
             this.btnCourses.Margin = new System.Windows.Forms.Padding(4);
             this.btnCourses.Name = "btnCourses";
             this.btnCourses.Size = new System.Drawing.Size(190, 32);
@@ -52,7 +52,7 @@
             // 
             // btnSubjects
             // 
-            this.btnSubjects.Location = new System.Drawing.Point(356, 152);
+            this.btnSubjects.Location = new System.Drawing.Point(396, 152);
             this.btnSubjects.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubjects.Name = "btnSubjects";
             this.btnSubjects.Size = new System.Drawing.Size(190, 32);
@@ -63,7 +63,7 @@
             // 
             // btnStudents
             // 
-            this.btnStudents.Location = new System.Drawing.Point(356, 221);
+            this.btnStudents.Location = new System.Drawing.Point(396, 216);
             this.btnStudents.Margin = new System.Windows.Forms.Padding(4);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Size = new System.Drawing.Size(190, 32);
@@ -74,10 +74,10 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(356, 576);
+            this.btnLogout.Location = new System.Drawing.Point(396, 571);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(190, 41);
+            this.btnLogout.Size = new System.Drawing.Size(190, 37);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -87,7 +87,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(329, 33);
+            this.label1.Location = new System.Drawing.Point(389, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(260, 38);
             this.label1.TabIndex = 4;
@@ -95,7 +95,7 @@
             // 
             // btnViewExam
             // 
-            this.btnViewExam.Location = new System.Drawing.Point(356, 286);
+            this.btnViewExam.Location = new System.Drawing.Point(396, 285);
             this.btnViewExam.Name = "btnViewExam";
             this.btnViewExam.Size = new System.Drawing.Size(190, 37);
             this.btnViewExam.TabIndex = 5;
@@ -105,7 +105,7 @@
             // 
             // btnViewMarks
             // 
-            this.btnViewMarks.Location = new System.Drawing.Point(356, 357);
+            this.btnViewMarks.Location = new System.Drawing.Point(396, 358);
             this.btnViewMarks.Name = "btnViewMarks";
             this.btnViewMarks.Size = new System.Drawing.Size(190, 33);
             this.btnViewMarks.TabIndex = 6;
@@ -115,7 +115,7 @@
             // 
             // btnViewTimetable
             // 
-            this.btnViewTimetable.Location = new System.Drawing.Point(356, 506);
+            this.btnViewTimetable.Location = new System.Drawing.Point(396, 504);
             this.btnViewTimetable.Name = "btnViewTimetable";
             this.btnViewTimetable.Size = new System.Drawing.Size(190, 34);
             this.btnViewTimetable.TabIndex = 7;
@@ -125,7 +125,7 @@
             // 
             // btnViewRooms
             // 
-            this.btnViewRooms.Location = new System.Drawing.Point(356, 426);
+            this.btnViewRooms.Location = new System.Drawing.Point(396, 427);
             this.btnViewRooms.Name = "btnViewRooms";
             this.btnViewRooms.Size = new System.Drawing.Size(190, 35);
             this.btnViewRooms.TabIndex = 8;

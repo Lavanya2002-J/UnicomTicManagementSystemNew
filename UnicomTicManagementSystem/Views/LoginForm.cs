@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,14 +15,19 @@ using UnicomTICManagementSystem.Controllers;
 namespace UnicomTicManagementSystem.Views
 {
     public partial class LoginForm : Form
-    {
-        public LoginForm()
+    { 
+        public static int LoggedInStudentId = -1;
+        public  LoginForm()
         {
             InitializeComponent();
+            
+
+            
             
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
             string username = textUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
@@ -35,29 +41,57 @@ namespace UnicomTicManagementSystem.Views
             {
                 connection.Open();
 
-                string query = "SELECT Role FROM Users WHERE Username = @username AND Password = @password";
+                string query = "SELECT UserID, Role FROM Users WHERE TRIM(Username) = @username AND TRIM(Password) = @password";
                 SQLiteCommand cmd = new SQLiteCommand(query, connection);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@password", password);
 
-                var roleObj = cmd.ExecuteScalar();
+                SQLiteDataReader reader = cmd.ExecuteReader();
 
-                if (roleObj != null)
+                if (reader.Read())
                 {
-                    string role = roleObj.ToString();
+                    int userId = Convert.ToInt32(reader["UserID"]);
+                    string role = reader["Role"].ToString();
 
-                    this.Hide();
+                    if (role == "Student")
+                    {
+                        // Get StudentID linked to this UserID
+                        string studentQuery = "SELECT StudentID FROM Students WHERE StudentID = @id";
+                        SQLiteCommand studentCmd = new SQLiteCommand(studentQuery, connection);
+                        studentCmd.Parameters.AddWithValue("@id", userId);
+                        object studentIdObj = studentCmd.ExecuteScalar();
 
-                    if (role == "Admin")
+                        if (studentIdObj != null)
+                        {
+                            LoggedInStudentId = Convert.ToInt32(studentIdObj);
+                            this.Hide();
+                            new StudentDashboard().Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Student not found in the Students table.");
+                            return;
+                        }
+                    }
+                    else if (role == "Admin")
+                    {
+                        this.Hide();
                         new AdminDashboard().Show();
-                    else if (role == "Student")
-                        new StudentDashboard().Show();
+                    }
                     else if (role == "Lecturer")
+                    {
+                        this.Hide();
                         new LecturerDashboard().Show();
+                    }
                     else if (role == "Staff")
+                    {
+                        this.Hide();
                         new StaffDashboard().Show();
+                    }
                     else
+                    {
                         MessageBox.Show("Unknown role. Contact admin.");
+                    }
                 }
                 else
                 {

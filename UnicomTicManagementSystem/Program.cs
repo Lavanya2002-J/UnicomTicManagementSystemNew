@@ -19,7 +19,7 @@ namespace UnicomTicManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Migration.InitializeDatabase();
+            //Migration.InitializeDatabase();
             Application.Run(new LoginForm());
         }
     }
