@@ -13,7 +13,7 @@ namespace UnicomTicManagementSystem.Controllers
         {
             private readonly string connectionString = "Data Source=unicomtic.db;Version=3;";
 
-            // ✅ Get all exams
+            // Get all exams
             public List<Exams> GetExams()
             {
                 List<Exams> examList = new List<Exams>();

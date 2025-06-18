@@ -20,7 +20,7 @@ namespace UnicomTicManagementSystem.Controllers
                 using (SQLiteConnection conn = new SQLiteConnection(connection))
                 {
                     conn.Open();
-                    conn.BusyTimeout = 5000; // Set busy timeout to 5 seconds
+                    
                 string query = "SELECT * FROM Marks";
                     SQLiteCommand cmd = new SQLiteCommand(query, conn);
                     SQLiteDataReader reader = cmd.ExecuteReader();
@@ -44,9 +44,10 @@ namespace UnicomTicManagementSystem.Controllers
             public void AddMark(Marks mark)
             {
                 using (SQLiteConnection conn = new SQLiteConnection(connection))
-                {
-                    conn.Open();
-                    conn.BusyTimeout = 5000; // Set busy timeout to 5 seconds
+                {   
+                
+                conn.Open();
+                    
                     string query = "INSERT INTO Marks (StudentID, ExamID, Score) VALUES (@studentId, @examId, @score)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conn);
                     cmd.Parameters.AddWithValue("@studentId", mark.StudentId);

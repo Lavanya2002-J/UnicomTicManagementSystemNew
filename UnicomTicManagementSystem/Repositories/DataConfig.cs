@@ -22,7 +22,9 @@ namespace UnicomTicManagementSystem.Repositories
                     SQLiteConnection.CreateFile(dbFile);
                 }
 
-                return new SQLiteConnection(connectionString);
+                var connection = new SQLiteConnection(connectionString);
+                connection.BusyTimeout = 5000; // Set busy timeout to 5 seconds
+                return connection;
             }
         }
     }

@@ -1,92 +1,92 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnicomTicManagementSystem.Models;
 using UnicomTicManagementSystem.Repositories;
 
-
-
 namespace UnicomTicManagementSystem.Controllers
 {
-        public class CourseController
+    public class CourseController
+    {
+        // Get all courses
+        public List<Courses> GetCourses()
         {
+            List<Courses> courses = new List<Courses>();
 
-        
-            private readonly string connectionString = "Data Source=unicomtic.db;Version=3;";
-            private SQLiteConnection sqliteConn;
-
-            private void OpenConnection()
+            using (var conn = DataConfig.GetConnection())
             {
-                sqliteConn = new SQLiteConnection(connectionString);
-                sqliteConn.Open();
-            }
-
-            private void CloseConnection()
-            {
-                if (sqliteConn != null && sqliteConn.State == System.Data.ConnectionState.Open)
-                    sqliteConn.Close();
-            }
-
-            public List<Courses> GetCourses()
-            {
-                
-                List<Courses> courses = new List<Courses>();
-                OpenConnection();
-
+                conn.Open();
                 string query = "SELECT * FROM Courses";
-                SQLiteCommand cmd = new SQLiteCommand(query, sqliteConn);
-                SQLiteDataReader reader = cmd.ExecuteReader();
 
-                while (reader.Read())
+                using (var cmd = new SQLiteCommand(query, conn))
+                using (var reader = cmd.ExecuteReader())
                 {
-                    courses.Add(new Courses
+                    while (reader.Read())
                     {
-                        CourseId = Convert.ToInt32(reader["CourseID"]),
-                        CourseName = reader["CourseName"].ToString()
-                    });
+                        courses.Add(new Courses
+                        {
+                            CourseId = Convert.ToInt32(reader["CourseID"]),
+                            CourseName = reader["CourseName"].ToString()
+                        });
+                    }
                 }
-
-                CloseConnection();
-                return courses;
             }
 
-            public void Add(Courses course)
+            return courses;
+        }
+
+        // Add a new course
+        public void Add(Courses course)
+        {
+            using (var conn = DataConfig.GetConnection())
             {
-                OpenConnection();
+                conn.Open();
                 string query = "INSERT INTO Courses (CourseName) VALUES (@name)";
-                SQLiteCommand cmd = new SQLiteCommand(query, sqliteConn);
-                cmd.Parameters.AddWithValue("@name", course.CourseName);
-                cmd.ExecuteNonQuery();
-                CloseConnection();
-            }
 
-            public void Update(Courses course)
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", course.CourseName);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // ✅ Update course
+        public void Update(Courses course)
+        {
+            using (var conn = DataConfig.GetConnection())
             {
-                OpenConnection();
+                conn.Open();
                 string query = "UPDATE Courses SET CourseName = @name WHERE CourseID = @id";
-                SQLiteCommand cmd = new SQLiteCommand(query, sqliteConn);
-                cmd.Parameters.AddWithValue("@name", course.CourseName);
-                cmd.Parameters.AddWithValue("@id", course.CourseId);
-                cmd.ExecuteNonQuery();
-                CloseConnection();
-            }
 
-            public void Delete(int courseId)
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", course.CourseName);
+                    cmd.Parameters.AddWithValue("@id", course.CourseId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        // Delete course
+        public void Delete(int courseId)
+        {
+            using (var conn = DataConfig.GetConnection())
             {
-                OpenConnection();
+                conn.Open();
                 string query = "DELETE FROM Courses WHERE CourseID = @id";
-                SQLiteCommand cmd = new SQLiteCommand(query, sqliteConn);
-                cmd.Parameters.AddWithValue("@id", courseId);
-                cmd.ExecuteNonQuery();
-                CloseConnection();
+
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", courseId);
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
     }
+}
 
 
-    
+
 
 

@@ -73,6 +73,7 @@
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Controllers\TimetableController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +170,12 @@
     <Compile Include="Views\TimetableForm.Designer.cs">
       <DependentUpon>TimetableForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserManagementForm.Designer.cs">
+      <DependentUpon>UserManagementForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ViewSubjectsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TimetableForm.resx">
       <DependentUpon>TimetableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserManagementForm.resx">
+      <DependentUpon>UserManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

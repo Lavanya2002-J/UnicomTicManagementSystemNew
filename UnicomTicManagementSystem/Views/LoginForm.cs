@@ -19,15 +19,12 @@ namespace UnicomTicManagementSystem.Views
         public static int LoggedInStudentId = -1;
         public  LoginForm()
         {
-            InitializeComponent();
-            
-
-            
+            InitializeComponent();    
             
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+        
             string username = textUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
@@ -41,7 +38,8 @@ namespace UnicomTicManagementSystem.Views
             {
                 connection.Open();
 
-                string query = "SELECT UserID, Role FROM Users WHERE TRIM(Username) = @username AND TRIM(Password) = @password";
+                // Check username and password
+                string query = "SELECT UserID, Role FROM Users WHERE Username = @username AND Password = @password";
                 SQLiteCommand cmd = new SQLiteCommand(query, connection);
                 cmd.Parameters.AddWithValue("@username", username);
                 cmd.Parameters.AddWithValue("@password", password);
@@ -50,47 +48,46 @@ namespace UnicomTicManagementSystem.Views
 
                 if (reader.Read())
                 {
-                    int userId = Convert.ToInt32(reader["UserID"]);
                     string role = reader["Role"].ToString();
+                    int userId = Convert.ToInt32(reader["UserID"]);
 
-                    if (role == "Student")
+                    this.Hide();
+
+                    if (role == "Admin")
                     {
-                        // Get StudentID linked to this UserID
-                        string studentQuery = "SELECT StudentID FROM Students WHERE StudentID = @id";
+                        new AdminDashboard().Show();
+                    }
+                    else if (role == "Student")
+                    {
+                        // Get matching StudentID from Students table
+                        string studentQuery = "SELECT StudentID FROM Students WHERE Name = @name";
                         SQLiteCommand studentCmd = new SQLiteCommand(studentQuery, connection);
-                        studentCmd.Parameters.AddWithValue("@id", userId);
-                        object studentIdObj = studentCmd.ExecuteScalar();
+                        studentCmd.Parameters.AddWithValue("@name", username);
 
+                        object studentIdObj = studentCmd.ExecuteScalar();
                         if (studentIdObj != null)
                         {
-                            LoggedInStudentId = Convert.ToInt32(studentIdObj);
-                            this.Hide();
+                            LoginForm.LoggedInStudentId = Convert.ToInt32(studentIdObj);
                             new StudentDashboard().Show();
                         }
                         else
                         {
-                            MessageBox.Show("Student not found in the Students table.");
-                            return;
+                            MessageBox.Show("Student account not found in Students table.");
+                            this.Show();
                         }
-                    }
-                    else if (role == "Admin")
-                    {
-                        this.Hide();
-                        new AdminDashboard().Show();
                     }
                     else if (role == "Lecturer")
                     {
-                        this.Hide();
                         new LecturerDashboard().Show();
                     }
                     else if (role == "Staff")
                     {
-                        this.Hide();
                         new StaffDashboard().Show();
                     }
                     else
                     {
                         MessageBox.Show("Unknown role. Contact admin.");
+                        this.Show();
                     }
                 }
                 else
@@ -101,6 +98,7 @@ namespace UnicomTicManagementSystem.Views
                 connection.Close();
             }
         }
+        
 
         private void textUsername_TextChanged(object sender, EventArgs e)
         {

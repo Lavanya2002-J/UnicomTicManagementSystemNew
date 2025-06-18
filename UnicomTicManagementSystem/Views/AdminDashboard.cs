@@ -98,5 +98,13 @@ namespace UnicomTicManagementSystem.Views
             roomsForm.Show();
             this.Hide();
         }
+
+        private void btnManageUsers_Click(object sender, EventArgs e)
+        {
+            UserManagementForm userManagementForm = new UserManagementForm();
+            userManagementForm.Show();
+            this.Hide();
+            
+        }
     }
 }

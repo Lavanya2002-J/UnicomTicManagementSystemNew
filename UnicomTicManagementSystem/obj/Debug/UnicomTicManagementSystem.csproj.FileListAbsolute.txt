@@ -57,3 +57,4 @@ E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTi.5B6226AA.Up2Date
 E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.exe
 E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.pdb
 E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StudentViewMarksForm.resources
+E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.UserManagementForm.resources

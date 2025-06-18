@@ -37,11 +37,12 @@
             this.btnViewMarks = new System.Windows.Forms.Button();
             this.btnViewTimetable = new System.Windows.Forms.Button();
             this.btnViewRooms = new System.Windows.Forms.Button();
+            this.btnManageUsers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCourses
             // 
-            this.btnCourses.Location = new System.Drawing.Point(396, 84);
+            this.btnCourses.Location = new System.Drawing.Point(396, 132);
             this.btnCourses.Margin = new System.Windows.Forms.Padding(4);
             this.btnCourses.Name = "btnCourses";
             this.btnCourses.Size = new System.Drawing.Size(190, 32);
@@ -52,7 +53,7 @@
             // 
             // btnSubjects
             // 
-            this.btnSubjects.Location = new System.Drawing.Point(396, 152);
+            this.btnSubjects.Location = new System.Drawing.Point(396, 188);
             this.btnSubjects.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubjects.Name = "btnSubjects";
             this.btnSubjects.Size = new System.Drawing.Size(190, 32);
@@ -63,7 +64,7 @@
             // 
             // btnStudents
             // 
-            this.btnStudents.Location = new System.Drawing.Point(396, 216);
+            this.btnStudents.Location = new System.Drawing.Point(396, 253);
             this.btnStudents.Margin = new System.Windows.Forms.Padding(4);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Size = new System.Drawing.Size(190, 32);
@@ -74,7 +75,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(396, 571);
+            this.btnLogout.Location = new System.Drawing.Point(396, 603);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(190, 37);
@@ -87,7 +88,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(389, 25);
+            this.label1.Location = new System.Drawing.Point(375, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(260, 38);
             this.label1.TabIndex = 4;
@@ -95,7 +96,7 @@
             // 
             // btnViewExam
             // 
-            this.btnViewExam.Location = new System.Drawing.Point(396, 285);
+            this.btnViewExam.Location = new System.Drawing.Point(396, 316);
             this.btnViewExam.Name = "btnViewExam";
             this.btnViewExam.Size = new System.Drawing.Size(190, 37);
             this.btnViewExam.TabIndex = 5;
@@ -105,7 +106,7 @@
             // 
             // btnViewMarks
             // 
-            this.btnViewMarks.Location = new System.Drawing.Point(396, 358);
+            this.btnViewMarks.Location = new System.Drawing.Point(396, 388);
             this.btnViewMarks.Name = "btnViewMarks";
             this.btnViewMarks.Size = new System.Drawing.Size(190, 33);
             this.btnViewMarks.TabIndex = 6;
@@ -115,7 +116,7 @@
             // 
             // btnViewTimetable
             // 
-            this.btnViewTimetable.Location = new System.Drawing.Point(396, 504);
+            this.btnViewTimetable.Location = new System.Drawing.Point(396, 531);
             this.btnViewTimetable.Name = "btnViewTimetable";
             this.btnViewTimetable.Size = new System.Drawing.Size(190, 34);
             this.btnViewTimetable.TabIndex = 7;
@@ -125,7 +126,7 @@
             // 
             // btnViewRooms
             // 
-            this.btnViewRooms.Location = new System.Drawing.Point(396, 427);
+            this.btnViewRooms.Location = new System.Drawing.Point(396, 459);
             this.btnViewRooms.Name = "btnViewRooms";
             this.btnViewRooms.Size = new System.Drawing.Size(190, 35);
             this.btnViewRooms.TabIndex = 8;
@@ -133,11 +134,22 @@
             this.btnViewRooms.UseVisualStyleBackColor = true;
             this.btnViewRooms.Click += new System.EventHandler(this.btnViewRooms_Click);
             // 
+            // btnManageUsers
+            // 
+            this.btnManageUsers.Location = new System.Drawing.Point(396, 66);
+            this.btnManageUsers.Name = "btnManageUsers";
+            this.btnManageUsers.Size = new System.Drawing.Size(190, 36);
+            this.btnManageUsers.TabIndex = 9;
+            this.btnManageUsers.Text = "Manage Users";
+            this.btnManageUsers.UseVisualStyleBackColor = true;
+            this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 630);
+            this.ClientSize = new System.Drawing.Size(1067, 667);
+            this.Controls.Add(this.btnManageUsers);
             this.Controls.Add(this.btnViewRooms);
             this.Controls.Add(this.btnViewTimetable);
             this.Controls.Add(this.btnViewMarks);
@@ -167,5 +179,6 @@
         private System.Windows.Forms.Button btnViewMarks;
         private System.Windows.Forms.Button btnViewTimetable;
         private System.Windows.Forms.Button btnViewRooms;
+        private System.Windows.Forms.Button btnManageUsers;
     }
 }
