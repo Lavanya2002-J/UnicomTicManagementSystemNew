@@ -3,8 +3,9 @@
     "",
     "\\UnicomTicManagementSystem",
     "\\UnicomTicManagementSystem\\Controllers",
+    "\\UnicomTicManagementSystem\\Repositories",
     "\\UnicomTicManagementSystem\\Views"
   ],
-  "SelectedNode": "\\UnicomTicManagementSystem\\Controllers\\MarkController.cs",
+  "SelectedNode": "\\UnicomTicManagementSystem\\Repositories\\Migration.cs",
   "PreviewInSolutionExplorer": false
 }

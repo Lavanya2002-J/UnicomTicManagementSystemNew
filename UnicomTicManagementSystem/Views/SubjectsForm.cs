@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnicomTicManagementSystem.Controllers;
 using UnicomTicManagementSystem.Models;
+using UnicomTicManagementSystem.Views;
 
 namespace UnicomTicManagementSystem.Views
 {
@@ -138,9 +139,10 @@ namespace UnicomTicManagementSystem.Views
         private void btnBackSubjects_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AdminDashboard dashboard = new AdminDashboard();
+            AdminDashboard dashboard = new AdminDashboard(LoginForm.LoggedInRole);
             dashboard.Show();
         }
+        
         
 
         private void ClearFields()

@@ -13,9 +13,11 @@ namespace UnicomTicManagementSystem.Views
 {
     public partial class AdminDashboard : Form
     {
-        public AdminDashboard()
+        public string LoggedInRole {  get; set; }
+        public AdminDashboard(string role)
         {
             InitializeComponent();
+            LoggedInRole = role;
         }
         private void btnCourses_Click(object sender, EventArgs e)
         {
@@ -106,5 +108,45 @@ namespace UnicomTicManagementSystem.Views
             this.Hide();
             
         }
+
+        private void AdminDashboard_Load(object sender, EventArgs e)
+        {
+            if (LoggedInRole == "Student")
+            {
+                btnManageUsers.Visible = false;
+                btnCourses.Visible = false;
+                btnSubjects.Visible = false;
+                btnStudents.Visible = false;
+                btnViewExam.Visible = false;
+                btnViewRooms.Visible = false;
+
+                label1.Text = "WELCOME STUDENT";
+            }
+            else if (LoggedInRole == "Lecturer")
+            {
+                btnManageUsers.Visible = false;
+                btnCourses.Visible = false;
+                btnSubjects.Visible = false;
+                btnStudents.Visible = false;
+                btnViewRooms.Visible = false;
+
+                label1.Text = "WELCOME LECTURER";
+            }
+            else if (LoggedInRole == "Staff")
+            {
+                btnManageUsers.Visible = false;
+                btnSubjects.Visible = false;
+                btnViewExam.Visible = false;
+                btnViewMarks.Visible = false;
+
+                label1.Text = "WELCOME STAFF";
+            }
+            else if (LoggedInRole == "Admin")
+            {
+                label1.Text = "WELCOME ADMIN";
+            }
+        }
+
     }
+    
 }

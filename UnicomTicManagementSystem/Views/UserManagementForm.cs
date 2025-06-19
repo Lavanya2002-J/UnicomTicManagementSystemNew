@@ -147,6 +147,13 @@ namespace UnicomTicManagementSystem.Views
             ClearFields(); 
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminDashboard dashboard = new AdminDashboard(LoginForm.LoggedInRole);
+            dashboard.ShowDialog();
+
+        }
     }
     
     

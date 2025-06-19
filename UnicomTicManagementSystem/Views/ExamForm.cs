@@ -73,9 +73,11 @@ namespace UnicomTicManagementSystem.Views
         
         {
             this.Hide();
-            new AdminDashboard().Show();
+            AdminDashboard dashboard = new AdminDashboard(LoginForm.LoggedInRole);
+            dashboard.Show();
+
         }
-        
+
 
         private void button3_Click(object sender, EventArgs e)
         

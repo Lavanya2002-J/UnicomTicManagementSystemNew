@@ -163,6 +163,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminDashboard";
             this.Text = "AdminDashboard";
+            this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

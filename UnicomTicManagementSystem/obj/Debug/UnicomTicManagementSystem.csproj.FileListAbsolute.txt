@@ -47,7 +47,6 @@ E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.Ex
 E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.LoginForm.resources
 E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.MarksForm.resources
 E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.RoomsForm.resources
-E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StudentDashboard.resources
 E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StudentsForm.resources
 E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.SubjectsForm.resources
 E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.TimetableForm.resources
@@ -56,5 +55,4 @@ E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.csproj.C
 E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTi.5B6226AA.Up2Date
 E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.exe
 E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.pdb
-E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StudentViewMarksForm.resources
 E:\UMSnew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.UserManagementForm.resources

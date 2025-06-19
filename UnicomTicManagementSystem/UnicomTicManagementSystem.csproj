@@ -110,12 +110,6 @@
     <Compile Include="Views\ExamForm.Designer.cs">
       <DependentUpon>ExamForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\LecturerDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\LecturerDashboard.Designer.cs">
-      <DependentUpon>LecturerDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,29 +128,11 @@
     <Compile Include="Views\RoomsForm.Designer.cs">
       <DependentUpon>RoomsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\StaffDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\StaffDashboard.Designer.cs">
-      <DependentUpon>StaffDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\StudentDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\StudentDashboard.Designer.cs">
-      <DependentUpon>StudentDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\StudentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\StudentsForm.Designer.cs">
       <DependentUpon>StudentsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\StudentViewMarksForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\StudentViewMarksForm.Designer.cs">
-      <DependentUpon>StudentViewMarksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SubjectsForm.cs">
       <SubType>Form</SubType>
@@ -175,12 +151,6 @@
     </Compile>
     <Compile Include="Views\UserManagementForm.Designer.cs">
       <DependentUpon>UserManagementForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ViewSubjectsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\ViewSubjectsForm.Designer.cs">
-      <DependentUpon>ViewSubjectsForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -210,14 +180,8 @@
     <EmbeddedResource Include="Views\RoomsForm.resx">
       <DependentUpon>RoomsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\StudentDashboard.resx">
-      <DependentUpon>StudentDashboard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\StudentsForm.resx">
       <DependentUpon>StudentsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\StudentViewMarksForm.resx">
-      <DependentUpon>StudentViewMarksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SubjectsForm.resx">
       <DependentUpon>SubjectsForm.cs</DependentUpon>
