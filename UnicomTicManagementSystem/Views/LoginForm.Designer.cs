@@ -50,7 +50,7 @@
             this.textUsername.Location = new System.Drawing.Point(457, 133);
             this.textUsername.Margin = new System.Windows.Forms.Padding(4);
             this.textUsername.Name = "textUsername";
-            this.textUsername.Size = new System.Drawing.Size(215, 30);
+            this.textUsername.Size = new System.Drawing.Size(215, 25);
             this.textUsername.TabIndex = 1;
             this.textUsername.TextChanged += new System.EventHandler(this.textUsername_TextChanged);
             // 
@@ -61,7 +61,7 @@
             this.labelPassword.Location = new System.Drawing.Point(319, 205);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(90, 23);
+            this.labelPassword.Size = new System.Drawing.Size(77, 19);
             this.labelPassword.TabIndex = 2;
             this.labelPassword.Text = "Password:";
             // 
@@ -71,7 +71,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(215, 30);
+            this.txtPassword.Size = new System.Drawing.Size(215, 25);
             this.txtPassword.TabIndex = 3;
             // 
             // labelRole
@@ -81,7 +81,7 @@
             this.labelRole.Location = new System.Drawing.Point(324, 279);
             this.labelRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRole.Name = "labelRole";
-            this.labelRole.Size = new System.Drawing.Size(50, 23);
+            this.labelRole.Size = new System.Drawing.Size(43, 19);
             this.labelRole.TabIndex = 4;
             this.labelRole.Text = "Role:";
             // 
@@ -97,7 +97,7 @@
             this.cmRole.Location = new System.Drawing.Point(457, 276);
             this.cmRole.Margin = new System.Windows.Forms.Padding(4);
             this.cmRole.Name = "cmRole";
-            this.cmRole.Size = new System.Drawing.Size(215, 31);
+            this.cmRole.Size = new System.Drawing.Size(215, 25);
             this.cmRole.TabIndex = 5;
             // 
             // btnLogin
@@ -126,7 +126,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(435, 41);
+            this.label1.Size = new System.Drawing.Size(354, 32);
             this.label1.TabIndex = 7;
             this.label1.Text = "Welcome to UnicomTic Portal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,13 +172,13 @@
             this.labelUsername.Location = new System.Drawing.Point(319, 139);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(94, 23);
+            this.labelUsername.Size = new System.Drawing.Size(80, 19);
             this.labelUsername.TabIndex = 7;
             this.labelUsername.Text = "Username:";
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 480);
             this.Controls.Add(this.labelRole);

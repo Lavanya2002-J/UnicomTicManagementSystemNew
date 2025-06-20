@@ -141,6 +141,7 @@ namespace UnicomTicManagementSystem.Views
                 btnSubjects.Visible = false;
                 btnStudents.Visible = false;
                 btnViewRooms.Visible = false;
+                btnViewExam.Visible=false;
 
                 label1.Text = "WELCOME LECTURER";
             }

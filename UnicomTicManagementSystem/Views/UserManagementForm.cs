@@ -92,14 +92,33 @@ namespace UnicomTicManagementSystem.Views
                 Role = cmbRole.SelectedItem.ToString()
             };
 
-            userController.AddUser(user);
+            int userId = userController.AddUser(user);
             MessageBox.Show("User added successfully!");
+
+            // ✅ Only for students
+            if (user.Role == "Student")
+            {
+                Students student = new Students
+                {
+                    Name = user.UserName,
+                    UserId = userId,
+                    CourseId = 1  // Default course
+                };
+
+                StudentController sc = new StudentController();
+                sc.AddStudent(student);
+                MessageBox.Show("Student profile created.");
+            }
 
             ClearFields();
             LoadUsers();
         }
 
         
+    
+        
+
+
 
         private void btnDelete_Click(object sender, EventArgs e)
         {

@@ -45,7 +45,7 @@
             this.labelCourseName.Location = new System.Drawing.Point(196, 93);
             this.labelCourseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCourseName.Name = "labelCourseName";
-            this.labelCourseName.Size = new System.Drawing.Size(64, 23);
+            this.labelCourseName.Size = new System.Drawing.Size(55, 19);
             this.labelCourseName.TabIndex = 0;
             this.labelCourseName.Text = "Course";
             // 
@@ -53,11 +53,12 @@
             // 
             this.txtCourseName.Location = new System.Drawing.Point(353, 90);
             this.txtCourseName.Name = "txtCourseName";
-            this.txtCourseName.Size = new System.Drawing.Size(247, 30);
+            this.txtCourseName.Size = new System.Drawing.Size(247, 26);
             this.txtCourseName.TabIndex = 1;
             // 
             // dataGridViewCourses
             // 
+            this.dataGridViewCourses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCourses.Location = new System.Drawing.Point(298, 207);
             this.dataGridViewCourses.Name = "dataGridViewCourses";
@@ -118,7 +119,7 @@
             // 
             // CoursesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 647);
             this.Controls.Add(this.btnBack);
@@ -130,7 +131,7 @@
             this.Controls.Add(this.txtCourseName);
             this.Controls.Add(this.labelCourseName);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CoursesForm";
             this.Text = "CoursesForm";
             this.Load += new System.EventHandler(this.CoursesForm_Load);

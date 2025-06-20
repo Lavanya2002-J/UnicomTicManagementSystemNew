@@ -7,10 +7,13 @@ using UnicomTicManagementSystem;
 
 namespace UnicomTicManagementSystem.Models
 {
-public class Students
+    public class Students
     {
         public int StudentId { get; set; }
         public string Name { get; set; }
         public int CourseId { get; set; }
+        public int UserId { get; set; }
+
+     
     }
 }

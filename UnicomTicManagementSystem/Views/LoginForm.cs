@@ -54,14 +54,14 @@ namespace UnicomTicManagementSystem.Views
 
                     if (role == "Student")
                     {
-                        string studentQuery = "SELECT StudentID FROM Students WHERE Name = @name";
+                        string studentQuery = "SELECT StudentID FROM Students WHERE UserID = @userId";
                         SQLiteCommand studentCmd = new SQLiteCommand(studentQuery, connection);
-                        studentCmd.Parameters.AddWithValue("@name", username);
+                        studentCmd.Parameters.AddWithValue("@userId", userId);
 
                         object studentIdObj = studentCmd.ExecuteScalar();
                         if (studentIdObj != null)
                         {
-                            LoggedInStudentId = Convert.ToInt32(studentIdObj);
+                            LoginForm.LoggedInStudentId = Convert.ToInt32(studentIdObj);
                             this.Hide();
                             new AdminDashboard(role).Show();  
                         }

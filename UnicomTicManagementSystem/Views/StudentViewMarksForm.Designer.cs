@@ -35,6 +35,7 @@
             // 
             // dataGridViewMarks
             // 
+            this.dataGridViewMarks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewMarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMarks.Location = new System.Drawing.Point(235, 108);
             this.dataGridViewMarks.Margin = new System.Windows.Forms.Padding(4);
@@ -58,7 +59,7 @@
             // 
             // StudentViewMarksForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 647);
             this.Controls.Add(this.btnBack);

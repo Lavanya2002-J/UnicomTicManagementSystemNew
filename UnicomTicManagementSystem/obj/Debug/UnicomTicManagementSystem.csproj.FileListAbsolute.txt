@@ -86,3 +86,32 @@ D:\LavanProject\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug
 D:\LavanProject\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StudentViewMarksForm.resources
 D:\LavanProject\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.exe.config
 D:\LavanProject\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.ExamForm.resources
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\UnicomTicManagementSystem.exe.config
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\UnicomTicManagementSystem.exe
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\UnicomTicManagementSystem.pdb
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\EntityFramework.dll
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\EntityFramework.SqlServer.dll
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\System.Data.SQLite.dll
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\System.Data.SQLite.EF6.dll
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\System.Data.SQLite.Linq.dll
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\EntityFramework.xml
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\EntityFramework.SqlServer.xml
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\System.Data.SQLite.xml
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.csproj.AssemblyReference.cache
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Properties.Resources.resources
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.AdminDashboard.resources
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.CoursesForm.resources
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.ExamForm.resources
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.LoginForm.resources
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.MarksForm.resources
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.RoomsForm.resources
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StudentsForm.resources
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StudentViewMarksForm.resources
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.SubjectsForm.resources
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.TimetableForm.resources
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.UserManagementForm.resources
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.csproj.GenerateResource.cache
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.csproj.CoreCompileInputs.cache
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTi.5B6226AA.Up2Date
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.exe
+Z:\New folder\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.pdb

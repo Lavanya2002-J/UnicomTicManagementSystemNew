@@ -43,10 +43,11 @@ namespace UnicomTicManagementSystem.Controllers
         }
 
         //  Add new user
-        public void AddUser(Users user)
+        public int AddUser(Users user)
         {
             using (SQLiteConnection conn = new SQLiteConnection(connection))
             {
+
                 conn.Open();
                 string query = "INSERT INTO Users (Username, Password, Role) VALUES (@username, @password, @role)";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
@@ -54,6 +55,20 @@ namespace UnicomTicManagementSystem.Controllers
                 cmd.Parameters.AddWithValue("@password", user.Password);
                 cmd.Parameters.AddWithValue("@role", user.Role);
                 cmd.ExecuteNonQuery();
+
+                cmd.CommandText = "SELECT last_insert_rowid()";
+                long id = (long)cmd.ExecuteScalar();  
+                return (int)id;
+                /* conn.Open();
+                 string query = "INSERT INTO Users (Username, Password, Role) VALUES (@username, @password, @role)";
+                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                 cmd.Parameters.AddWithValue("@username", user.UserName);
+                 cmd.Parameters.AddWithValue("@password", user.Password);
+                 cmd.Parameters.AddWithValue("@role", user.Role);
+                 cmd.ExecuteNonQuery();
+                 cmd.CommandText = "SELECT last_insert_rowid()";
+                 long id = (long)cmd.ExecuteScalar();*/
+
             }
         }
 

@@ -49,7 +49,7 @@
             this.labelSubject.Location = new System.Drawing.Point(283, 78);
             this.labelSubject.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSubject.Name = "labelSubject";
-            this.labelSubject.Size = new System.Drawing.Size(75, 23);
+            this.labelSubject.Size = new System.Drawing.Size(62, 19);
             this.labelSubject.TabIndex = 0;
             this.labelSubject.Text = "Subject:";
             // 
@@ -59,7 +59,7 @@
             this.labelRoom.Location = new System.Drawing.Point(283, 152);
             this.labelRoom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRoom.Name = "labelRoom";
-            this.labelRoom.Size = new System.Drawing.Size(62, 23);
+            this.labelRoom.Size = new System.Drawing.Size(53, 19);
             this.labelRoom.TabIndex = 1;
             this.labelRoom.Text = "Room:";
             // 
@@ -69,7 +69,7 @@
             this.labelTimeSlot.Location = new System.Drawing.Point(283, 242);
             this.labelTimeSlot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTimeSlot.Name = "labelTimeSlot";
-            this.labelTimeSlot.Size = new System.Drawing.Size(55, 23);
+            this.labelTimeSlot.Size = new System.Drawing.Size(46, 19);
             this.labelTimeSlot.TabIndex = 2;
             this.labelTimeSlot.Text = "Time:";
             // 
@@ -79,7 +79,7 @@
             this.cmbSubject.Location = new System.Drawing.Point(461, 75);
             this.cmbSubject.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSubject.Name = "cmbSubject";
-            this.cmbSubject.Size = new System.Drawing.Size(223, 31);
+            this.cmbSubject.Size = new System.Drawing.Size(223, 25);
             this.cmbSubject.TabIndex = 3;
             this.cmbSubject.SelectedIndexChanged += new System.EventHandler(this.cmbSubject_SelectedIndexChanged);
             // 
@@ -89,7 +89,7 @@
             this.cmbRoom.Location = new System.Drawing.Point(461, 163);
             this.cmbRoom.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRoom.Name = "cmbRoom";
-            this.cmbRoom.Size = new System.Drawing.Size(223, 31);
+            this.cmbRoom.Size = new System.Drawing.Size(223, 25);
             this.cmbRoom.TabIndex = 4;
             this.cmbRoom.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -98,11 +98,12 @@
             this.txtTimeSlot.Location = new System.Drawing.Point(461, 242);
             this.txtTimeSlot.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimeSlot.Name = "txtTimeSlot";
-            this.txtTimeSlot.Size = new System.Drawing.Size(223, 30);
+            this.txtTimeSlot.Size = new System.Drawing.Size(223, 25);
             this.txtTimeSlot.TabIndex = 5;
             // 
             // dataGridViewTimetable
             // 
+            this.dataGridViewTimetable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTimetable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTimetable.Location = new System.Drawing.Point(371, 297);
             this.dataGridViewTimetable.Margin = new System.Windows.Forms.Padding(4);
@@ -172,7 +173,7 @@
             // 
             // TimetableForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1237, 692);
             this.Controls.Add(this.btnBack);

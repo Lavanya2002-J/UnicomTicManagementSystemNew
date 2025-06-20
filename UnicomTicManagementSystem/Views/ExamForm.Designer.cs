@@ -46,7 +46,7 @@
             this.labelExamName.AutoSize = true;
             this.labelExamName.Location = new System.Drawing.Point(144, 66);
             this.labelExamName.Name = "labelExamName";
-            this.labelExamName.Size = new System.Drawing.Size(53, 23);
+            this.labelExamName.Size = new System.Drawing.Size(45, 19);
             this.labelExamName.TabIndex = 0;
             this.labelExamName.Text = "Exam";
             // 
@@ -54,7 +54,7 @@
             // 
             this.txtExameName.Location = new System.Drawing.Point(323, 66);
             this.txtExameName.Name = "txtExameName";
-            this.txtExameName.Size = new System.Drawing.Size(229, 30);
+            this.txtExameName.Size = new System.Drawing.Size(229, 26);
             this.txtExameName.TabIndex = 1;
             // 
             // labelSubject
@@ -62,7 +62,7 @@
             this.labelSubject.AutoSize = true;
             this.labelSubject.Location = new System.Drawing.Point(144, 150);
             this.labelSubject.Name = "labelSubject";
-            this.labelSubject.Size = new System.Drawing.Size(70, 23);
+            this.labelSubject.Size = new System.Drawing.Size(58, 19);
             this.labelSubject.TabIndex = 2;
             this.labelSubject.Text = "Subject";
             // 
@@ -71,11 +71,12 @@
             this.cmbSubject.FormattingEnabled = true;
             this.cmbSubject.Location = new System.Drawing.Point(323, 142);
             this.cmbSubject.Name = "cmbSubject";
-            this.cmbSubject.Size = new System.Drawing.Size(229, 31);
+            this.cmbSubject.Size = new System.Drawing.Size(229, 27);
             this.cmbSubject.TabIndex = 3;
             // 
             // dataGridViewExams
             // 
+            this.dataGridViewExams.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewExams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewExams.Location = new System.Drawing.Point(254, 241);
             this.dataGridViewExams.Name = "dataGridViewExams";
@@ -137,7 +138,7 @@
             // 
             // ExamForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 647);
             this.Controls.Add(this.btnBack);
@@ -151,7 +152,7 @@
             this.Controls.Add(this.txtExameName);
             this.Controls.Add(this.labelExamName);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ExamForm";
             this.Text = "ExamForm";
             this.Load += new System.EventHandler(this.ExamForm_Load);

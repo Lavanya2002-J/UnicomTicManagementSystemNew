@@ -47,7 +47,7 @@
             this.labelRoomName.Location = new System.Drawing.Point(133, 52);
             this.labelRoomName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRoomName.Name = "labelRoomName";
-            this.labelRoomName.Size = new System.Drawing.Size(128, 28);
+            this.labelRoomName.Size = new System.Drawing.Size(93, 19);
             this.labelRoomName.TabIndex = 0;
             this.labelRoomName.Text = "RoomName:";
             // 
@@ -57,16 +57,16 @@
             this.labelRoomType.Location = new System.Drawing.Point(133, 147);
             this.labelRoomType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRoomType.Name = "labelRoomType";
-            this.labelRoomType.Size = new System.Drawing.Size(117, 28);
+            this.labelRoomType.Size = new System.Drawing.Size(85, 19);
             this.labelRoomType.TabIndex = 1;
             this.labelRoomType.Text = "RoomType:";
             // 
             // txtRoomName
             // 
             this.txtRoomName.Location = new System.Drawing.Point(335, 52);
-            this.txtRoomName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRoomName.Margin = new System.Windows.Forms.Padding(4);
             this.txtRoomName.Name = "txtRoomName";
-            this.txtRoomName.Size = new System.Drawing.Size(242, 34);
+            this.txtRoomName.Size = new System.Drawing.Size(242, 25);
             this.txtRoomName.TabIndex = 2;
             // 
             // cmbRoomType
@@ -78,16 +78,17 @@
             "Exam Hall",
             "Conference Hall"});
             this.cmbRoomType.Location = new System.Drawing.Point(335, 139);
-            this.cmbRoomType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbRoomType.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRoomType.Name = "cmbRoomType";
-            this.cmbRoomType.Size = new System.Drawing.Size(242, 36);
+            this.cmbRoomType.Size = new System.Drawing.Size(242, 25);
             this.cmbRoomType.TabIndex = 3;
             // 
             // dataGridViewRooms
             // 
+            this.dataGridViewRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRooms.Location = new System.Drawing.Point(335, 238);
-            this.dataGridViewRooms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewRooms.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewRooms.Name = "dataGridViewRooms";
             this.dataGridViewRooms.RowHeadersWidth = 62;
             this.dataGridViewRooms.RowTemplate.Height = 28;
@@ -99,7 +100,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(128, 554);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 32);
             this.btnAdd.TabIndex = 5;
@@ -110,7 +111,7 @@
             // btnEdit
             // 
             this.btnEdit.Location = new System.Drawing.Point(315, 554);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(100, 32);
             this.btnEdit.TabIndex = 6;
@@ -121,7 +122,7 @@
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(512, 554);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 32);
             this.btnDelete.TabIndex = 7;
@@ -132,7 +133,7 @@
             // btnView
             // 
             this.btnView.Location = new System.Drawing.Point(706, 554);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnView.Margin = new System.Windows.Forms.Padding(4);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(100, 32);
             this.btnView.TabIndex = 8;
@@ -143,7 +144,7 @@
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(893, 554);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(100, 32);
             this.btnBack.TabIndex = 9;
@@ -153,7 +154,7 @@
             // 
             // RoomsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1071, 640);
             this.Controls.Add(this.btnBack);
@@ -167,7 +168,7 @@
             this.Controls.Add(this.labelRoomType);
             this.Controls.Add(this.labelRoomName);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RoomsForm";
             this.Text = "RoomsForm";
             this.Load += new System.EventHandler(this.RoomsForm_Load);

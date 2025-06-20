@@ -49,7 +49,7 @@
             this.labelStudent.Location = new System.Drawing.Point(189, 64);
             this.labelStudent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStudent.Name = "labelStudent";
-            this.labelStudent.Size = new System.Drawing.Size(91, 28);
+            this.labelStudent.Size = new System.Drawing.Size(64, 19);
             this.labelStudent.TabIndex = 0;
             this.labelStudent.Text = "Student:";
             this.labelStudent.Click += new System.EventHandler(this.labelStudent_Click);
@@ -60,7 +60,7 @@
             this.labelExam.Location = new System.Drawing.Point(189, 133);
             this.labelExam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelExam.Name = "labelExam";
-            this.labelExam.Size = new System.Drawing.Size(68, 28);
+            this.labelExam.Size = new System.Drawing.Size(49, 19);
             this.labelExam.TabIndex = 1;
             this.labelExam.Text = "Exam:";
             this.labelExam.Click += new System.EventHandler(this.labelExam_Click);
@@ -70,7 +70,7 @@
             this.labelScore.AutoSize = true;
             this.labelScore.Location = new System.Drawing.Point(189, 199);
             this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(69, 28);
+            this.labelScore.Size = new System.Drawing.Size(51, 19);
             this.labelScore.TabIndex = 2;
             this.labelScore.Text = "Score:";
             this.labelScore.Click += new System.EventHandler(this.labelScore_Click);
@@ -80,7 +80,7 @@
             this.cmbStudent.FormattingEnabled = true;
             this.cmbStudent.Location = new System.Drawing.Point(403, 56);
             this.cmbStudent.Name = "cmbStudent";
-            this.cmbStudent.Size = new System.Drawing.Size(225, 36);
+            this.cmbStudent.Size = new System.Drawing.Size(225, 25);
             this.cmbStudent.TabIndex = 3;
             this.cmbStudent.SelectedIndexChanged += new System.EventHandler(this.cmbStudent_SelectedIndexChanged);
             // 
@@ -89,7 +89,7 @@
             this.cmbExam.FormattingEnabled = true;
             this.cmbExam.Location = new System.Drawing.Point(407, 130);
             this.cmbExam.Name = "cmbExam";
-            this.cmbExam.Size = new System.Drawing.Size(221, 36);
+            this.cmbExam.Size = new System.Drawing.Size(221, 25);
             this.cmbExam.TabIndex = 4;
             this.cmbExam.SelectedIndexChanged += new System.EventHandler(this.cmbExam_SelectedIndexChanged);
             // 
@@ -97,18 +97,19 @@
             // 
             this.txtScore.Location = new System.Drawing.Point(407, 196);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(221, 34);
+            this.txtScore.Size = new System.Drawing.Size(221, 25);
             this.txtScore.TabIndex = 5;
             this.txtScore.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridViewMarks
             // 
+            this.dataGridViewMarks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewMarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMarks.Location = new System.Drawing.Point(324, 274);
+            this.dataGridViewMarks.Location = new System.Drawing.Point(324, 261);
             this.dataGridViewMarks.Name = "dataGridViewMarks";
             this.dataGridViewMarks.RowHeadersWidth = 62;
             this.dataGridViewMarks.RowTemplate.Height = 28;
-            this.dataGridViewMarks.Size = new System.Drawing.Size(424, 226);
+            this.dataGridViewMarks.Size = new System.Drawing.Size(445, 239);
             this.dataGridViewMarks.TabIndex = 6;
             this.dataGridViewMarks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMarks_CellContentClick);
             // 
@@ -164,7 +165,7 @@
             // 
             // MarksForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 630);
             this.Controls.Add(this.btnBack);

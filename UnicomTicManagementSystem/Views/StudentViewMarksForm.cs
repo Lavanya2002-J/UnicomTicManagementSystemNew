@@ -24,9 +24,10 @@ namespace UnicomTicManagementSystem.Views
         private void StudentViewMarksForm_Load(object sender, EventArgs e)
         {
             int studentId = LoginForm.LoggedInStudentId;
+            MessageBox.Show("Logged In Student ID:" + LoginForm.LoggedInStudentId);
 
             var marks = marksController.GetMarksByStudentId(studentId);
-            dataGridViewMarks.DataSource = marksController.GetMarksByStudentId(LoginForm.LoggedInStudentId);
+            dataGridViewMarks.DataSource = marks;
             dataGridViewMarks.AutoGenerateColumns = true;
            
             if (dataGridViewMarks.Columns["MarkId"] != null)

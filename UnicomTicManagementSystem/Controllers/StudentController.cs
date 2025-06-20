@@ -44,10 +44,11 @@ namespace UnicomTicManagementSystem.Controllers
                 using (SQLiteConnection conn = new SQLiteConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "INSERT INTO Students (Name, CourseID) VALUES (@name, @courseId)";
+                    string query = "INSERT INTO Students (Name, CourseID,UserID) VALUES (@name, @courseId,@userId)";
                     SQLiteCommand cmd = new SQLiteCommand(query, conn);
                     cmd.Parameters.AddWithValue("@name", s.Name);
                     cmd.Parameters.AddWithValue("@courseId", s.CourseId);
+                    cmd.Parameters.AddWithValue("@userId",s.UserId);
                     cmd.ExecuteNonQuery();
                 }
             }
