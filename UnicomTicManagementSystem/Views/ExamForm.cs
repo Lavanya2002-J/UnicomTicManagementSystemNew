@@ -14,110 +14,41 @@ namespace UnicomTicManagementSystem.Views
 {
     public partial class ExamForm : Form
     {
-        private ExamController examController = new ExamController();
-        private SubjectController SubjectController = new SubjectController();
+        private readonly ExamController examController = new ExamController();
+        private readonly SubjectController subjectController = new SubjectController();
         private int selectedExamId = -1;
 
         public ExamForm()
         {
             InitializeComponent();
             this.Load += ExamForm_Load;
+
         }
 
+        private void ExamForm_Load(object sender, EventArgs e)
+        {
+            LoadSubjects();
+            LoadExams();
+        }
         private void LoadSubjects()
         {
-            var subjects = SubjectController.GetSubjects();
-            cmbSubject.DataSource = subjects;
+            cmbSubject.DataSource = subjectController.GetSubjects();
             cmbSubject.DisplayMember = "SubjectName";
-            cmbSubject.ValueMember = "SubjectId";
+            cmbSubject.ValueMember = "SubjectID";
             cmbSubject.SelectedIndex = -1;
         }
+
         private void LoadExams()
         {
-            var exams = examController.GetExams();
-            dataGridViewExams.DataSource = exams;
+            dataGridViewExams.DataSource = examController.GetExams();
             dataGridViewExams.AutoGenerateColumns = true;
             dataGridViewExams.ClearSelection();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-  
-        {
-            if (selectedExamId == -1)
-            {
-                MessageBox.Show("Please select an exam to edit.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtExameName.Text))
-            {
-                MessageBox.Show("Exam name cannot be empty.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            Exams updatedExam = new Exams
-            {
-                ExamId = selectedExamId,
-                ExamName = txtExameName.Text.Trim(),
-                SubjectID = Convert.ToInt32(cmbSubject.SelectedValue)
-            };
-
-            examController.UpdateExam(updatedExam);
-            MessageBox.Show(" Exam updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            LoadExams();
-            ClearFields();
-        }
         
 
-        private void button5_Click(object sender, EventArgs e)
-        
-        {
-            this.Hide();
-            AdminDashboard dashboard = new AdminDashboard(LoginForm.LoggedInRole);
-            dashboard.Show();
-
-        }
 
 
-        private void button3_Click(object sender, EventArgs e)
-        
-        {
-            if (selectedExamId == -1)
-            {
-                MessageBox.Show("Please select an exam to delete.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            var confirm = MessageBox.Show("Are you sure you want to delete this exam?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (confirm == DialogResult.Yes)
-            {
-                examController.DeleteExam(selectedExamId);
-                MessageBox.Show("🗑 Exam deleted successfully.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadExams();
-                ClearFields();
-            }
-        }
-        
-
-        private void labelExameName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtExameName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelSubject_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbSubject_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void dataGridViewExams_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -126,9 +57,9 @@ namespace UnicomTicManagementSystem.Views
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtExameName.Text))
+            if (string.IsNullOrWhiteSpace(txtExameName.Text) || cmbSubject.SelectedIndex == -1)
             {
-                MessageBox.Show("Please enter an exam name.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill all fields.");
                 return;
             }
 
@@ -139,57 +70,89 @@ namespace UnicomTicManagementSystem.Views
             };
 
             examController.AddExam(exam);
-            MessageBox.Show(" Exam added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Exam added successfully.");
             LoadExams();
             ClearFields();
         }
 
         
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (selectedExamId == -1)
+            {
+                MessageBox.Show("Please select an exam to edit.");
+                return;
+            }
+
+            Exams exam = new Exams
+            {
+                ExamId = selectedExamId,
+                ExamName = txtExameName.Text.Trim(),
+                SubjectID = Convert.ToInt32(cmbSubject.SelectedValue)
+            };
+
+            examController.UpdateExam(exam);
+            MessageBox.Show("Exam updated successfully.");
+            LoadExams();
+            ClearFields();
+        }
+
+
+        
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (selectedExamId == -1)
+            {
+                MessageBox.Show("Please select an exam to delete.");
+                return;
+            }
+
+            var confirm = MessageBox.Show("Are you sure to delete this exam?", "Confirm", MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.Yes)
+            {
+                examController.DeleteExam(selectedExamId);
+                MessageBox.Show("Exam deleted.");
+                LoadExams();
+                ClearFields();
+            }
+        }
+
+     
+
         private void btnView_Click(object sender, EventArgs e)
         {
-            
-        
             if (dataGridViewExams.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = dataGridViewExams.SelectedRows[0];
-                selectedExamId = Convert.ToInt32(row.Cells["ExamID"].Value);
-                txtExameName.Text = row.Cells["ExamName"].Value.ToString();
-                cmbSubject.SelectedValue = Convert.ToInt32(row.Cells["SubjectID"].Value);
+                selectedExamId = Convert.ToInt32(row.Cells["ExamId"].Value);
+                txtExameName.Text = row.Cells["ExamName"].ToString();
+                cmbSubject.SelectedValue = Convert.ToInt32(row.Cells["SubjectID"]);
             }
             else
             {
                 MessageBox.Show("Please select an exam to view.");
             }
         }
+
+
         
 
-        private void ExamForm_Load(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            AdminDashboard dashboard = new AdminDashboard(LoginForm.LoggedInRole);
+            dashboard.Show();
         }
+
+  
+
         private void ClearFields()
         {
             txtExameName.Clear();
             cmbSubject.SelectedIndex = -1;
             selectedExamId = -1;
         }
-
-        private void dataGridViewExams_SelectionChanged(object sender, EventArgs e)
-        
-        {
-            if (dataGridViewExams.SelectedRows.Count > 0)
-            {
-                DataGridViewRow row = dataGridViewExams.SelectedRows[0];
-                selectedExamId = Convert.ToInt32(row.Cells["ExamID"].Value);
-                txtExameName.Text = row.Cells["ExamName"].Value.ToString();
-                cmbSubject.SelectedValue = Convert.ToInt32(row.Cells["SubjectID"].Value);
-            }
-            else
-            {
-                selectedExamId = -1;
-            }
-        }
     }
-    
 }

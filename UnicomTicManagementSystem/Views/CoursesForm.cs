@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Entity;
 using System.Drawing;
-using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnicomTicManagementSystem.Controllers;
 using UnicomTicManagementSystem.Models;
-using UnicomTicManagementSystem.Repositories;
 
 namespace UnicomTicManagementSystem.Views
 {
@@ -23,40 +20,30 @@ namespace UnicomTicManagementSystem.Views
         public CoursesForm()
         {
             InitializeComponent();
-            this.Load += CourseForm_Load;
+            this.Load += CoursesForm_Load;
+
         }
 
-        private void CourseForm_Load(object sender, EventArgs e)
+        private void CoursesForm_Load(object sender, EventArgs e)
         {
             LoadCourses();
+
+
         }
         private void LoadCourses()
-        {   var courses = controller.GetCourses();
- 
-            dataGridViewCourses.AutoGenerateColumns = true;
-            dataGridViewCourses.DataSource = controller.GetCourses();
-
-        }
-
-        
-     private void btnDelete_Click(object sender, EventArgs e)
         {
-
-            if (selectedCourseId <= 0)
-            {
-                MessageBox.Show("Please select a course to delete.");
-                return;
-            }
-
-            controller.Delete(selectedCourseId);
-            LoadCourses();
-            ClearFields();
+            var courses = controller.GetCourses();
+            dataGridViewCourses.AutoGenerateColumns = true;
+            dataGridViewCourses.DataSource = courses;
         }
 
-        
+        private void ClearFields()
+        {
+            txtCourseName.Text = "";
+            selectedCourseId = -1;
+        }
 
-        private void btnAddCourse_Click(object sender, EventArgs e)
-     
+        private void btnAddCourse_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtCourseName.Text))
             {
@@ -67,17 +54,22 @@ namespace UnicomTicManagementSystem.Views
             Courses course = new Courses
             {
                 CourseName = txtCourseName.Text.Trim(),
-                
             };
 
-            controller.Add(course);
-            LoadCourses();
-            ClearFields();
+            try
+            {
+                controller.Add(course);
+                MessageBox.Show("Course added successfully!");
+                LoadCourses();
+                ClearFields();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error adding course: " + ex.Message);
+            }
         }
 
-
-
-        private void btnEditCourse_Click(object sender, EventArgs e)
+        private void btnEditCourseName_Click(object sender, EventArgs e)
         {
             if (selectedCourseId <= 0)
             {
@@ -89,7 +81,6 @@ namespace UnicomTicManagementSystem.Views
             {
                 CourseId = selectedCourseId,
                 CourseName = txtCourseName.Text.Trim(),
-
             };
 
             controller.Update(course);
@@ -97,20 +88,26 @@ namespace UnicomTicManagementSystem.Views
             ClearFields();
         }
 
-        private void ClearFields()
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            if (selectedCourseId <= 0)
             {
-            txtCourseName.Text = "";
-            selectedCourseId = -1;
+                MessageBox.Show("Please select a course to delete.");
+                return;
             }
 
-        private void btnViewCourse_Click(object sender, EventArgs e)
+            controller.Delete(selectedCourseId);
+            LoadCourses();
+            ClearFields();
+        }
+
+        private void btnViewCourse_Click_1(object sender, EventArgs e)
         {
             if (dataGridViewCourses.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = dataGridViewCourses.CurrentRow;
                 selectedCourseId = Convert.ToInt32(row.Cells[0].Value);
                 txtCourseName.Text = row.Cells[1].Value.ToString();
-
             }
             else
             {
@@ -118,12 +115,17 @@ namespace UnicomTicManagementSystem.Views
             }
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             AdminDashboard dashboard = new AdminDashboard(LoginForm.LoggedInRole);
             dashboard.Show();
-
         }
-    }    
-}
+
+        
+        }
+    }
+
+
+
+    

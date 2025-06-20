@@ -12,5 +12,6 @@ namespace UnicomTicManagementSystem.Models
         public int StudentId { get; set; }
         public int ExamId { get;  set; }
         public int Score { get; set; }
+        public string SubjectName { get; set; } 
     }
 }

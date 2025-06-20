@@ -40,8 +40,42 @@ namespace UnicomTicManagementSystem.Controllers
                 return marksList;
             }
 
-            // Add mark
-            public void AddMark(Marks mark)
+        // Get marks by student ID
+        public List<Marks> GetMarksByStudentId(int studentId)
+        {
+            List<Marks> studentMarks = new List<Marks>();
+
+            using (SQLiteConnection conn = new SQLiteConnection(connection))
+            {
+                conn.Open();
+                string query = @"
+            SELECT M.MarkID, M.StudentID, M.Score, S.SubjectName
+            FROM Marks M
+            JOIN Exams E ON M.ExamID = E.ExamID
+            JOIN Subjects S ON E.SubjectID = S.SubjectID
+            WHERE M.StudentID = @studentId";
+
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@studentId", studentId);
+
+                SQLiteDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    studentMarks.Add(new Marks
+                    {
+                        MarkId = Convert.ToInt32(reader["MarkID"]),
+                        StudentId = Convert.ToInt32(reader["StudentID"]),
+                        Score = Convert.ToInt32(reader["Score"]),
+                        SubjectName = reader["SubjectName"].ToString() 
+                    });
+                }
+            }
+
+            return studentMarks;
+        }
+
+        // Add mark
+        public void AddMark(Marks mark)
             {
                 using (SQLiteConnection conn = new SQLiteConnection(connection))
                 {   

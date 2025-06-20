@@ -47,7 +47,7 @@
             this.labelStudentName.Location = new System.Drawing.Point(153, 67);
             this.labelStudentName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStudentName.Name = "labelStudentName";
-            this.labelStudentName.Size = new System.Drawing.Size(142, 28);
+            this.labelStudentName.Size = new System.Drawing.Size(121, 23);
             this.labelStudentName.TabIndex = 0;
             this.labelStudentName.Text = "StudentName";
             this.labelStudentName.Click += new System.EventHandler(this.labelStudentName_Click);
@@ -58,7 +58,7 @@
             this.labelCourse.Location = new System.Drawing.Point(153, 156);
             this.labelCourse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCourse.Name = "labelCourse";
-            this.labelCourse.Size = new System.Drawing.Size(76, 28);
+            this.labelCourse.Size = new System.Drawing.Size(64, 23);
             this.labelCourse.TabIndex = 1;
             this.labelCourse.Text = "Course";
             this.labelCourse.Click += new System.EventHandler(this.labelCourse_Click);
@@ -68,7 +68,7 @@
             this.txtStudentName.Location = new System.Drawing.Point(333, 67);
             this.txtStudentName.Margin = new System.Windows.Forms.Padding(4);
             this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(198, 34);
+            this.txtStudentName.Size = new System.Drawing.Size(315, 30);
             this.txtStudentName.TabIndex = 2;
             this.txtStudentName.TextChanged += new System.EventHandler(this.txtStudentName_TextChanged);
             // 
@@ -78,7 +78,7 @@
             this.cmbCourse.Location = new System.Drawing.Point(333, 153);
             this.cmbCourse.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCourse.Name = "cmbCourse";
-            this.cmbCourse.Size = new System.Drawing.Size(198, 36);
+            this.cmbCourse.Size = new System.Drawing.Size(315, 31);
             this.cmbCourse.TabIndex = 3;
             this.cmbCourse.SelectedIndexChanged += new System.EventHandler(this.cmbCourse_SelectedIndexChanged);
             // 
@@ -89,7 +89,7 @@
             this.dataGridViewStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewStudents.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStudents.Location = new System.Drawing.Point(333, 224);
+            this.dataGridViewStudents.Location = new System.Drawing.Point(274, 224);
             this.dataGridViewStudents.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewStudents.MultiSelect = false;
             this.dataGridViewStudents.Name = "dataGridViewStudents";
@@ -98,7 +98,7 @@
             this.dataGridViewStudents.RowHeadersWidth = 62;
             this.dataGridViewStudents.RowTemplate.Height = 28;
             this.dataGridViewStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewStudents.Size = new System.Drawing.Size(383, 246);
+            this.dataGridViewStudents.Size = new System.Drawing.Size(462, 268);
             this.dataGridViewStudents.TabIndex = 4;
             this.dataGridViewStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStudents_CellContentClick);
             this.dataGridViewStudents.SelectionChanged += new System.EventHandler(this.dataGridViewStudents_SelectionChanged);
@@ -159,7 +159,7 @@
             // 
             // StudentsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 630);
             this.Controls.Add(this.btnBack);

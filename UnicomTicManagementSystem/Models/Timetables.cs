@@ -14,4 +14,3 @@ namespace UnicomTicManagementSystem.Models
         public int RoomId { get; set; }
     }
 }
- 

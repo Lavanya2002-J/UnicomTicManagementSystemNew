@@ -87,6 +87,7 @@
     <Compile Include="Models\Students.cs" />
     <Compile Include="Models\Subjects.cs" />
     <Compile Include="Models\Timetables.cs" />
+    <Compile Include="Models\TimetableView.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,6 +134,12 @@
     </Compile>
     <Compile Include="Views\StudentsForm.Designer.cs">
       <DependentUpon>StudentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentViewMarksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StudentViewMarksForm.Designer.cs">
+      <DependentUpon>StudentViewMarksForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SubjectsForm.cs">
       <SubType>Form</SubType>
@@ -182,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StudentsForm.resx">
       <DependentUpon>StudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentViewMarksForm.resx">
+      <DependentUpon>StudentViewMarksForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SubjectsForm.resx">
       <DependentUpon>SubjectsForm.cs</DependentUpon>

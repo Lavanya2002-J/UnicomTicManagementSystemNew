@@ -49,7 +49,7 @@
             this.labelSubject.Location = new System.Drawing.Point(283, 78);
             this.labelSubject.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSubject.Name = "labelSubject";
-            this.labelSubject.Size = new System.Drawing.Size(87, 28);
+            this.labelSubject.Size = new System.Drawing.Size(75, 23);
             this.labelSubject.TabIndex = 0;
             this.labelSubject.Text = "Subject:";
             // 
@@ -59,7 +59,7 @@
             this.labelRoom.Location = new System.Drawing.Point(283, 152);
             this.labelRoom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRoom.Name = "labelRoom";
-            this.labelRoom.Size = new System.Drawing.Size(72, 28);
+            this.labelRoom.Size = new System.Drawing.Size(62, 23);
             this.labelRoom.TabIndex = 1;
             this.labelRoom.Text = "Room:";
             // 
@@ -69,7 +69,7 @@
             this.labelTimeSlot.Location = new System.Drawing.Point(283, 242);
             this.labelTimeSlot.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTimeSlot.Name = "labelTimeSlot";
-            this.labelTimeSlot.Size = new System.Drawing.Size(64, 28);
+            this.labelTimeSlot.Size = new System.Drawing.Size(55, 23);
             this.labelTimeSlot.TabIndex = 2;
             this.labelTimeSlot.Text = "Time:";
             // 
@@ -77,39 +77,40 @@
             // 
             this.cmbSubject.FormattingEnabled = true;
             this.cmbSubject.Location = new System.Drawing.Point(461, 75);
-            this.cmbSubject.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbSubject.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSubject.Name = "cmbSubject";
-            this.cmbSubject.Size = new System.Drawing.Size(223, 36);
+            this.cmbSubject.Size = new System.Drawing.Size(223, 31);
             this.cmbSubject.TabIndex = 3;
+            this.cmbSubject.SelectedIndexChanged += new System.EventHandler(this.cmbSubject_SelectedIndexChanged);
             // 
             // cmbRoom
             // 
             this.cmbRoom.FormattingEnabled = true;
             this.cmbRoom.Location = new System.Drawing.Point(461, 163);
-            this.cmbRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbRoom.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRoom.Name = "cmbRoom";
-            this.cmbRoom.Size = new System.Drawing.Size(223, 36);
+            this.cmbRoom.Size = new System.Drawing.Size(223, 31);
             this.cmbRoom.TabIndex = 4;
             this.cmbRoom.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // txtTimeSlot
             // 
             this.txtTimeSlot.Location = new System.Drawing.Point(461, 242);
-            this.txtTimeSlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimeSlot.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimeSlot.Name = "txtTimeSlot";
-            this.txtTimeSlot.Size = new System.Drawing.Size(223, 34);
+            this.txtTimeSlot.Size = new System.Drawing.Size(223, 30);
             this.txtTimeSlot.TabIndex = 5;
             // 
             // dataGridViewTimetable
             // 
             this.dataGridViewTimetable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTimetable.Location = new System.Drawing.Point(451, 320);
-            this.dataGridViewTimetable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewTimetable.Location = new System.Drawing.Point(371, 297);
+            this.dataGridViewTimetable.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewTimetable.Name = "dataGridViewTimetable";
             this.dataGridViewTimetable.RowHeadersWidth = 62;
             this.dataGridViewTimetable.RowTemplate.Height = 28;
             this.dataGridViewTimetable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewTimetable.Size = new System.Drawing.Size(372, 210);
+            this.dataGridViewTimetable.Size = new System.Drawing.Size(515, 271);
             this.dataGridViewTimetable.TabIndex = 6;
             this.dataGridViewTimetable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTimetable_CellContentClick);
             this.dataGridViewTimetable.SelectionChanged += new System.EventHandler(this.dataGridViewTimetable_SelectionChanged);
@@ -117,7 +118,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Location = new System.Drawing.Point(191, 596);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(100, 32);
             this.buttonAdd.TabIndex = 7;
@@ -128,7 +129,7 @@
             // btnEdit
             // 
             this.btnEdit.Location = new System.Drawing.Point(371, 596);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(100, 32);
             this.btnEdit.TabIndex = 8;
@@ -139,7 +140,7 @@
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(553, 596);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 32);
             this.btnDelete.TabIndex = 9;
@@ -150,7 +151,7 @@
             // btnView
             // 
             this.btnView.Location = new System.Drawing.Point(756, 596);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnView.Margin = new System.Windows.Forms.Padding(4);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(100, 32);
             this.btnView.TabIndex = 10;
@@ -161,7 +162,7 @@
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(950, 596);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(100, 32);
             this.btnBack.TabIndex = 11;
@@ -171,7 +172,7 @@
             // 
             // TimetableForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1237, 692);
             this.Controls.Add(this.btnBack);
@@ -187,7 +188,7 @@
             this.Controls.Add(this.labelRoom);
             this.Controls.Add(this.labelSubject);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TimetableForm";
             this.Text = "TimetableForm";
             this.Load += new System.EventHandler(this.TimetableForm_Load);

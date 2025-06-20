@@ -18,6 +18,7 @@ namespace UnicomTicManagementSystem.Views
         {
             InitializeComponent();
             LoggedInRole = role;
+            
         }
         private void btnCourses_Click(object sender, EventArgs e)
         {
@@ -82,10 +83,21 @@ namespace UnicomTicManagementSystem.Views
 
         private void btnViewMarks_Click(object sender, EventArgs e)
         {
-            MarksForm marksForm = new MarksForm();
-            marksForm.Show();
+      
+            if (LoginForm.LoggedInRole == "Student")
+            {
+                StudentViewMarksForm studentView = new StudentViewMarksForm();
+                studentView.Show();
+            }
+            else
+            {
+                MarksForm marksForm = new MarksForm();
+                marksForm.Show();
+            }
+
             this.Hide();
         }
+        
 
         private void btnViewTimetable_Click(object sender, EventArgs e)
         {

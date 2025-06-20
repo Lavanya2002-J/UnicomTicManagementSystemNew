@@ -46,7 +46,7 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(432, 56);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(216, 34);
+            this.txtUsername.Size = new System.Drawing.Size(216, 30);
             this.txtUsername.TabIndex = 0;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
@@ -54,7 +54,7 @@
             // 
             this.textPassword.Location = new System.Drawing.Point(432, 139);
             this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(216, 34);
+            this.textPassword.Size = new System.Drawing.Size(216, 30);
             this.textPassword.TabIndex = 1;
             // 
             // cmbRole
@@ -62,7 +62,7 @@
             this.cmbRole.FormattingEnabled = true;
             this.cmbRole.Location = new System.Drawing.Point(432, 218);
             this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(216, 36);
+            this.cmbRole.Size = new System.Drawing.Size(216, 31);
             this.cmbRole.TabIndex = 2;
             // 
             // labelUserName
@@ -70,7 +70,7 @@
             this.labelUserName.AutoSize = true;
             this.labelUserName.Location = new System.Drawing.Point(265, 56);
             this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(115, 28);
+            this.labelUserName.Size = new System.Drawing.Size(97, 23);
             this.labelUserName.TabIndex = 3;
             this.labelUserName.Text = "UserName:";
             // 
@@ -79,7 +79,7 @@
             this.labelPassword.AutoSize = true;
             this.labelPassword.Location = new System.Drawing.Point(265, 139);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(106, 28);
+            this.labelPassword.Size = new System.Drawing.Size(90, 23);
             this.labelPassword.TabIndex = 4;
             this.labelPassword.Text = "Password:";
             this.labelPassword.Click += new System.EventHandler(this.label2_Click);
@@ -89,7 +89,7 @@
             this.labelRole.AutoSize = true;
             this.labelRole.Location = new System.Drawing.Point(265, 226);
             this.labelRole.Name = "labelRole";
-            this.labelRole.Size = new System.Drawing.Size(59, 28);
+            this.labelRole.Size = new System.Drawing.Size(50, 23);
             this.labelRole.TabIndex = 5;
             this.labelRole.Text = "Role:";
             this.labelRole.Click += new System.EventHandler(this.label3_Click);
@@ -97,11 +97,11 @@
             // dataGridViewUsers
             // 
             this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUsers.Location = new System.Drawing.Point(358, 295);
+            this.dataGridViewUsers.Location = new System.Drawing.Point(312, 295);
             this.dataGridViewUsers.Name = "dataGridViewUsers";
             this.dataGridViewUsers.RowHeadersWidth = 62;
             this.dataGridViewUsers.RowTemplate.Height = 28;
-            this.dataGridViewUsers.Size = new System.Drawing.Size(404, 222);
+            this.dataGridViewUsers.Size = new System.Drawing.Size(472, 239);
             this.dataGridViewUsers.TabIndex = 6;
             // 
             // btnAddUser
@@ -146,7 +146,7 @@
             // 
             // UserManagementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 630);
             this.Controls.Add(this.btnUpdate);

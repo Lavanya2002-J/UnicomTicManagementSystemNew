@@ -12,34 +12,46 @@ namespace UnicomTicManagementSystem.Controllers
         {
             private string connectionString = "Data Source=unicomtic.db;Version=3;";
 
-            // Get all timetables
-            public List<Timetables> GetTimetables()
-            {
-                List<Timetables> list = new List<Timetables>();
-                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "SELECT * FROM Timetables";
-                    SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                    SQLiteDataReader reader = cmd.ExecuteReader();
+        // Get all timetables
+        public List<TimetableView> GetTimetableViews()
+        {
+            List<TimetableView> list = new List<TimetableView>();
 
+            using (SQLiteConnection conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = @"
+            SELECT 
+                t.TimetableID,
+                s.SubjectName,
+                r.RoomName,
+                t.TimeSlot
+            FROM Timetables t
+            JOIN Subjects s ON t.SubjectID = s.SubjectID
+            JOIN Rooms r ON t.RoomID = r.RoomID";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
                     while (reader.Read())
                     {
-                        Timetables t = new Timetables
+                        list.Add(new TimetableView
                         {
                             TimetableId = Convert.ToInt32(reader["TimetableID"]),
-                            SubjectId = Convert.ToInt32(reader["SubjectID"]),
-                            TimeSlot = reader["TimeSlot"].ToString(),
-                            RoomId = Convert.ToInt32(reader["RoomID"])
-                        };
-                        list.Add(t);
+                            SubjectName = reader["SubjectName"].ToString(),
+                            RoomName = reader["RoomName"].ToString(),
+                            TimeSlot = reader["TimeSlot"].ToString()
+                        });
                     }
                 }
-                return list;
             }
 
-            // Add timetable
-            public void AddTimetable(Timetables timetable)
+            return list;
+        }
+
+        // Add timetable
+        public void AddTimetable(Timetables timetable)
             {
                 using (SQLiteConnection conn = new SQLiteConnection(connectionString))
                 {

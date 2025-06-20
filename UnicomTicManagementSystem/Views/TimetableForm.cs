@@ -33,7 +33,31 @@ namespace UnicomTicManagementSystem.Views
             LoadSubjects();
             LoadRooms();
             LoadTimetables();
+
+            if (LoginForm.LoggedInRole == "Student" || LoginForm.LoggedInRole == "Lecturer")
+            {
+                
+                labelSubject.Visible = false;
+                labelRoom.Visible = false;
+                labelTimeSlot.Visible = false;
+
+               
+                cmbSubject.Visible = false;
+                cmbRoom.Visible = false;
+                txtTimeSlot.Visible = false;
+
+              
+                buttonAdd.Visible = false;
+                btnEdit.Visible = false;
+                btnDelete.Visible = false;
+                btnView.Visible = false;
+
+                
+                dataGridViewTimetable.Visible = true;
+                btnBack.Visible = true;
+            }
         }
+        
 
         // Load all subjects into combo box
         private void LoadSubjects()
@@ -56,9 +80,13 @@ namespace UnicomTicManagementSystem.Views
         // Load all timetables into DataGridView
         private void LoadTimetables()
         {
-            dataGridViewTimetable.DataSource = timetableController.GetTimetables();
+            dataGridViewTimetable.DataSource = timetableController.GetTimetableViews();
             dataGridViewTimetable.AutoGenerateColumns = true;
             dataGridViewTimetable.ClearSelection();
+            if ( dataGridViewTimetable.Columns["TimetableId"] != null )
+                dataGridViewTimetable.Columns["TimetableId"].Visible = false;
+            
+            
         }
 
 
@@ -215,13 +243,18 @@ namespace UnicomTicManagementSystem.Views
             if (dataGridViewTimetable.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = dataGridViewTimetable.SelectedRows[0];
-                selectedTimetableId = Convert.ToInt32(row.Cells["TimetableID"].Value);
-                cmbSubject.SelectedValue = Convert.ToInt32(row.Cells["SubjectID"].Value);
-                cmbRoom.SelectedValue = Convert.ToInt32(row.Cells["RoomID"].Value);
+                selectedTimetableId = Convert.ToInt32(row.Cells["TimetableId"].Value);
+                cmbSubject.Text = row.Cells["SubjectName"].Value.ToString();
+                cmbRoom.Text = row.Cells["RoomName"].Value.ToString();
                 txtTimeSlot.Text = row.Cells["TimeSlot"].Value.ToString();
 
 
             }
+        }
+
+        private void cmbSubject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

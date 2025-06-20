@@ -50,7 +50,7 @@
             this.textUsername.Location = new System.Drawing.Point(457, 133);
             this.textUsername.Margin = new System.Windows.Forms.Padding(4);
             this.textUsername.Name = "textUsername";
-            this.textUsername.Size = new System.Drawing.Size(215, 34);
+            this.textUsername.Size = new System.Drawing.Size(215, 30);
             this.textUsername.TabIndex = 1;
             this.textUsername.TextChanged += new System.EventHandler(this.textUsername_TextChanged);
             // 
@@ -61,7 +61,7 @@
             this.labelPassword.Location = new System.Drawing.Point(319, 205);
             this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(106, 28);
+            this.labelPassword.Size = new System.Drawing.Size(90, 23);
             this.labelPassword.TabIndex = 2;
             this.labelPassword.Text = "Password:";
             // 
@@ -71,7 +71,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(215, 34);
+            this.txtPassword.Size = new System.Drawing.Size(215, 30);
             this.txtPassword.TabIndex = 3;
             // 
             // labelRole
@@ -81,7 +81,7 @@
             this.labelRole.Location = new System.Drawing.Point(324, 279);
             this.labelRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRole.Name = "labelRole";
-            this.labelRole.Size = new System.Drawing.Size(59, 28);
+            this.labelRole.Size = new System.Drawing.Size(50, 23);
             this.labelRole.TabIndex = 4;
             this.labelRole.Text = "Role:";
             // 
@@ -97,7 +97,7 @@
             this.cmRole.Location = new System.Drawing.Point(457, 276);
             this.cmRole.Margin = new System.Windows.Forms.Padding(4);
             this.cmRole.Name = "cmRole";
-            this.cmRole.Size = new System.Drawing.Size(215, 36);
+            this.cmRole.Size = new System.Drawing.Size(215, 31);
             this.cmRole.TabIndex = 5;
             // 
             // btnLogin
@@ -108,7 +108,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(517, 357);
+            this.btnLogin.Location = new System.Drawing.Point(450, 375);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(92, 44);
@@ -126,7 +126,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(520, 48);
+            this.label1.Size = new System.Drawing.Size(435, 41);
             this.label1.TabIndex = 7;
             this.label1.Text = "Welcome to UnicomTic Portal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -138,7 +138,7 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(878, 74);
+            this.panelTop.Size = new System.Drawing.Size(745, 74);
             this.panelTop.TabIndex = 1;
             // 
             // panelLeft
@@ -148,7 +148,7 @@
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 74);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(267, 370);
+            this.panelLeft.Size = new System.Drawing.Size(267, 406);
             this.panelLeft.TabIndex = 2;
             this.panelLeft.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLeft_Paint);
             // 
@@ -159,7 +159,7 @@
             this.pictureLogo.Image = global::UnicomTicManagementSystem.Properties.Resources.UNICOM_TIC_LOGO_2048x773;
             this.pictureLogo.Location = new System.Drawing.Point(0, 0);
             this.pictureLogo.Name = "pictureLogo";
-            this.pictureLogo.Size = new System.Drawing.Size(267, 370);
+            this.pictureLogo.Size = new System.Drawing.Size(267, 406);
             this.pictureLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureLogo.TabIndex = 0;
             this.pictureLogo.TabStop = false;
@@ -172,15 +172,15 @@
             this.labelUsername.Location = new System.Drawing.Point(319, 139);
             this.labelUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(111, 28);
+            this.labelUsername.Size = new System.Drawing.Size(94, 23);
             this.labelUsername.TabIndex = 7;
             this.labelUsername.Text = "Username:";
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 444);
+            this.ClientSize = new System.Drawing.Size(745, 480);
             this.Controls.Add(this.labelRole);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);

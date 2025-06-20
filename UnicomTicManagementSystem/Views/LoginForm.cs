@@ -17,7 +17,7 @@ namespace UnicomTicManagementSystem.Views
     public partial class LoginForm : Form
     { 
         public static int LoggedInStudentId = -1;
-        public static string LoggedInRole = string.Empty; 
+        public static string LoggedInRole = ""; 
         public  LoginForm()
         {
             InitializeComponent();    
@@ -49,6 +49,7 @@ namespace UnicomTicManagementSystem.Views
                 {
                     string role = reader["Role"].ToString();
                     int userId = Convert.ToInt32(reader["UserID"]);
+                    LoginForm.LoggedInRole = role;
                     reader.Close(); 
 
                     if (role == "Student")

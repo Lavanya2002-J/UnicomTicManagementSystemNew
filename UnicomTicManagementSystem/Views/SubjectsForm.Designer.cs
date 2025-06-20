@@ -45,7 +45,7 @@
             this.txtSubjectName.Location = new System.Drawing.Point(341, 54);
             this.txtSubjectName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSubjectName.Name = "txtSubjectName";
-            this.txtSubjectName.Size = new System.Drawing.Size(271, 34);
+            this.txtSubjectName.Size = new System.Drawing.Size(271, 30);
             this.txtSubjectName.TabIndex = 0;
             this.txtSubjectName.TextChanged += new System.EventHandler(this.txtSubjectName_TextChanged);
             // 
@@ -54,7 +54,7 @@
             this.comboCourse.FormattingEnabled = true;
             this.comboCourse.Location = new System.Drawing.Point(341, 137);
             this.comboCourse.Name = "comboCourse";
-            this.comboCourse.Size = new System.Drawing.Size(271, 36);
+            this.comboCourse.Size = new System.Drawing.Size(271, 31);
             this.comboCourse.TabIndex = 1;
             this.comboCourse.SelectedIndexChanged += new System.EventHandler(this.comboCourse_SelectedIndexChanged);
             // 
@@ -62,11 +62,11 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(341, 218);
+            this.dataGridView1.Location = new System.Drawing.Point(304, 218);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(396, 249);
+            this.dataGridView1.Size = new System.Drawing.Size(471, 282);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
@@ -116,7 +116,7 @@
             this.labelSubject.AutoSize = true;
             this.labelSubject.Location = new System.Drawing.Point(197, 60);
             this.labelSubject.Name = "labelSubject";
-            this.labelSubject.Size = new System.Drawing.Size(87, 28);
+            this.labelSubject.Size = new System.Drawing.Size(75, 23);
             this.labelSubject.TabIndex = 7;
             this.labelSubject.Text = "Subject:";
             // 
@@ -125,13 +125,13 @@
             this.labelCourseName.AutoSize = true;
             this.labelCourseName.Location = new System.Drawing.Point(197, 140);
             this.labelCourseName.Name = "labelCourseName";
-            this.labelCourseName.Size = new System.Drawing.Size(81, 28);
+            this.labelCourseName.Size = new System.Drawing.Size(69, 23);
             this.labelCourseName.TabIndex = 8;
             this.labelCourseName.Text = "Course:";
             // 
             // SubjectsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 630);
             this.Controls.Add(this.labelCourseName);
