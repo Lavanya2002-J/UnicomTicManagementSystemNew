@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{659295FC-B7E1-4324-8F24-5CB3681E5AF5}|UnicomTicManagementSystem\\UnicomTicManagementSystem.csproj|E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\unicomticmanagementsystem\\repositories\\migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{659295FC-B7E1-4324-8F24-5CB3681E5AF5}|UnicomTicManagementSystem\\UnicomTicManagementSystem.csproj|e:\\unicomticmanagementsystemoriginal\\unicomticmanagementsystemnew\\unicomticmanagementsystem\\repositories\\migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{659295FC-B7E1-4324-8F24-5CB3681E5AF5}|UnicomTicManagementSystem\\UnicomTicManagementSystem.csproj|solutionrelative:unicomticmanagementsystem\\repositories\\migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{659295FC-B7E1-4324-8F24-5CB3681E5AF5}|UnicomTicManagementSystem\\UnicomTicManagementSystem.csproj|solutionrelative:unicomticmanagementsystem\\views\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{659295FC-B7E1-4324-8F24-5CB3681E5AF5}|UnicomTicManagementSystem\\UnicomTicManagementSystem.csproj|e:\\unicomticmanagementsystemoriginal\\unicomticmanagementsystemnew\\unicomticmanagementsystem\\views\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{659295FC-B7E1-4324-8F24-5CB3681E5AF5}|UnicomTicManagementSystem\\UnicomTicManagementSystem.csproj|E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\unicomticmanagementsystem\\views\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{659295FC-B7E1-4324-8F24-5CB3681E5AF5}|UnicomTicManagementSystem\\UnicomTicManagementSystem.csproj|solutionrelative:unicomticmanagementsystem\\views\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -266,8 +266,8 @@
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\UnicomTicManagementSystem\\Views\\LoginForm.cs",
               "RelativeDocumentMoniker": "UnicomTicManagementSystem\\Views\\LoginForm.cs",
-              "ToolTip": "E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\UnicomTicManagementSystem\\Views\\LoginForm.cs [Design]",
-              "RelativeToolTip": "UnicomTicManagementSystem\\Views\\LoginForm.cs [Design]",
+              "ToolTip": "E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\UnicomTicManagementSystem\\Views\\LoginForm.cs [Design]*",
+              "RelativeToolTip": "UnicomTicManagementSystem\\Views\\LoginForm.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T05:50:13.123Z",
               "EditorCaption": " [Design]"
@@ -278,8 +278,8 @@
               "Title": "LoginForm.cs",
               "DocumentMoniker": "E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\UnicomTicManagementSystem\\Views\\LoginForm.cs",
               "RelativeDocumentMoniker": "UnicomTicManagementSystem\\Views\\LoginForm.cs",
-              "ToolTip": "E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\UnicomTicManagementSystem\\Views\\LoginForm.cs",
-              "RelativeToolTip": "UnicomTicManagementSystem\\Views\\LoginForm.cs",
+              "ToolTip": "E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\UnicomTicManagementSystem\\Views\\LoginForm.cs*",
+              "RelativeToolTip": "UnicomTicManagementSystem\\Views\\LoginForm.cs*",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T07:06:48.185Z",
@@ -291,9 +291,9 @@
               "Title": "Migration.cs",
               "DocumentMoniker": "E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\UnicomTicManagementSystem\\Repositories\\Migration.cs",
               "RelativeDocumentMoniker": "UnicomTicManagementSystem\\Repositories\\Migration.cs",
-              "ToolTip": "E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\UnicomTicManagementSystem\\Repositories\\Migration.cs",
-              "RelativeToolTip": "UnicomTicManagementSystem\\Repositories\\Migration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAJAAAAAAAAAA==",
+              "ToolTip": "E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\UnicomTicManagementSystem\\Repositories\\Migration.cs*",
+              "RelativeToolTip": "UnicomTicManagementSystem\\Repositories\\Migration.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T05:30:13.956Z",
               "EditorCaption": ""
@@ -794,10 +794,11 @@
               "Title": "LoginForm.resx",
               "DocumentMoniker": "E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\UnicomTicManagementSystem\\Views\\LoginForm.resx",
               "RelativeDocumentMoniker": "UnicomTicManagementSystem\\Views\\LoginForm.resx",
-              "ToolTip": "E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\UnicomTicManagementSystem\\Views\\LoginForm.resx",
-              "RelativeToolTip": "UnicomTicManagementSystem\\Views\\LoginForm.resx",
+              "ToolTip": "E:\\UnicomTicManagementSystemOriginal\\UnicomTicManagementSystemNew\\UnicomTicManagementSystem\\Views\\LoginForm.resx*",
+              "RelativeToolTip": "UnicomTicManagementSystem\\Views\\LoginForm.resx*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-06-15T16:35:55.522Z"
+              "WhenOpened": "2025-06-15T16:35:55.522Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -809,7 +810,8 @@
               "RelativeToolTip": "UnicomTicManagementSystem\\Views\\LoginForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T16:16:59.069Z"
+              "WhenOpened": "2025-06-15T16:16:59.069Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

@@ -24,7 +24,11 @@ namespace UnicomTicManagementSystem.Repositories
                     UserID INTEGER PRIMARY KEY AUTOINCREMENT,
                     Username TEXT,
                     Password TEXT,
-                    Role TEXT
+                    Role TEXT,
+                    Email TEXT,
+                    Phone TEXT,
+                    NIC TEXT,
+                    Gender Text
                 );";
 
                 string coursesTable = @"CREATE TABLE IF NOT EXISTS Courses (
@@ -41,7 +45,8 @@ namespace UnicomTicManagementSystem.Repositories
                 string studentsTable = @"CREATE TABLE IF NOT EXISTS Students (
                     StudentID INTEGER PRIMARY KEY AUTOINCREMENT,
                     Name TEXT,
-                    CourseID INTEGER
+                    CourseID INTEGER,
+                    UserID INTEGER
                 );";
 
                 string examsTable = @"CREATE TABLE IF NOT EXISTS Exams (
@@ -67,7 +72,8 @@ namespace UnicomTicManagementSystem.Repositories
                     TimetableID INTEGER PRIMARY KEY AUTOINCREMENT,
                     SubjectID INTEGER,
                     TimeSlot TEXT,
-                    RoomID INTEGER
+                    RoomID INTEGER,
+                    DATE TEXT
                 );";
 
                 ExecuteCommand(usersTable, connection);
