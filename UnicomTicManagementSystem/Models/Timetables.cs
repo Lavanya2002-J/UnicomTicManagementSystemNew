@@ -12,5 +12,7 @@ namespace UnicomTicManagementSystem.Models
         public int SubjectId { get; set; }
         public string TimeSlot { get; set; }
         public int RoomId { get; set; }
+
+        public string Date { get; set; }
     }
 }

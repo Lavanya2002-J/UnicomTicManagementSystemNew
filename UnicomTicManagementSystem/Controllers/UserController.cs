@@ -29,10 +29,15 @@ namespace UnicomTicManagementSystem.Controllers
                 {
                     Users user = new Users
                     {
-                        UserId = Convert.ToInt32(reader["UserID"]),
+                        UserId = Convert.ToInt32(reader["UserId"]),
                         UserName = reader["Username"].ToString(),
                         Password = reader["Password"].ToString(),
-                        Role = reader["Role"].ToString()
+                        Role = reader["Role"].ToString(),
+                        Email = reader["Email"].ToString(),
+                        Phone = reader["Phone"].ToString(),
+                        NIC = reader["NIC"].ToString(),
+                        Gender = reader["Gender"].ToString()
+
                     };
 
                     users.Add(user);
@@ -49,25 +54,23 @@ namespace UnicomTicManagementSystem.Controllers
             {
 
                 conn.Open();
-                string query = "INSERT INTO Users (Username, Password, Role) VALUES (@username, @password, @role)";
-                SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                cmd.Parameters.AddWithValue("@username", user.UserName);
-                cmd.Parameters.AddWithValue("@password", user.Password);
-                cmd.Parameters.AddWithValue("@role", user.Role);
-                cmd.ExecuteNonQuery();
+                {
 
-                cmd.CommandText = "SELECT last_insert_rowid()";
-                long id = (long)cmd.ExecuteScalar();  
-                return (int)id;
-                /* conn.Open();
-                 string query = "INSERT INTO Users (Username, Password, Role) VALUES (@username, @password, @role)";
-                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                 cmd.Parameters.AddWithValue("@username", user.UserName);
-                 cmd.Parameters.AddWithValue("@password", user.Password);
-                 cmd.Parameters.AddWithValue("@role", user.Role);
-                 cmd.ExecuteNonQuery();
-                 cmd.CommandText = "SELECT last_insert_rowid()";
-                 long id = (long)cmd.ExecuteScalar();*/
+                    string query = "INSERT INTO Users (Username, Password, Role,Email,Phone,NIC,Gender) VALUES (@username, @password, @role,@email,@phone,@nic,@gender)";
+                    SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@username", user.UserName);
+                    cmd.Parameters.AddWithValue("@password", user.Password);
+                    cmd.Parameters.AddWithValue("@role", user.Role);
+                    cmd.Parameters.AddWithValue("@email", user.Email);
+                    cmd.Parameters.AddWithValue("@phone", user.Phone);
+                    cmd.Parameters.AddWithValue("@nic", user.NIC);
+                    cmd.Parameters.AddWithValue("@gender", user.Gender);
+                    cmd.ExecuteNonQuery();
+
+                    cmd.CommandText = "SELECT last_insert_rowid()";
+                    long id = (long)cmd.ExecuteScalar();
+                    return (int)id;
+                }
 
             }
         }
@@ -78,12 +81,16 @@ namespace UnicomTicManagementSystem.Controllers
             using (SQLiteConnection conn = new SQLiteConnection(connection))
             {
                 conn.Open();
-                string query = "UPDATE Users SET Username = @username, Password = @password, Role = @role WHERE UserID = @id";
+                string query = @"UPDATE Users SET Username = @username, Password = @password, Role = @role,Email = @email, Phone = @phone, NIC = @nic, Gender = @gender WHERE UserID = @id";
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@username", user.UserName);
                 cmd.Parameters.AddWithValue("@password", user.Password);
                 cmd.Parameters.AddWithValue("@role", user.Role);
                 cmd.Parameters.AddWithValue("@id", user.UserId);
+                cmd.Parameters.AddWithValue("@email", user.Email);
+                cmd.Parameters.AddWithValue("@phone", user.Phone);
+                cmd.Parameters.AddWithValue("@nic", user.NIC);
+                cmd.Parameters.AddWithValue("@gender", user);
                 cmd.ExecuteNonQuery();
             }
         }

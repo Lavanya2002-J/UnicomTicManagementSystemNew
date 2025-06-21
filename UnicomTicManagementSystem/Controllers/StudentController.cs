@@ -28,11 +28,12 @@ namespace UnicomTicManagementSystem.Controllers
                     {
                         students.Add(new Students
                         {
-                            StudentId = Convert.ToInt32(reader["StudentID"]),
+                            StudentId = reader["StudentID"] != DBNull.Value ? Convert.ToInt32(reader["StudentID"]) : 0,
                             Name = reader["Name"].ToString(),
-                            CourseId = Convert.ToInt32(reader["CourseID"])
+                            CourseId = reader["CourseID"] != DBNull.Value ? Convert.ToInt32(reader["CourseID"]) : 0,
+                            UserId = reader["UserID"] != DBNull.Value ? Convert.ToInt32(reader["UserID"]) : 0   
                         });
-                    }
+                }
                 }
 
                 return students;
@@ -64,7 +65,8 @@ namespace UnicomTicManagementSystem.Controllers
                     cmd.Parameters.AddWithValue("@name", s.Name);
                     cmd.Parameters.AddWithValue("@courseId", s.CourseId);
                     cmd.Parameters.AddWithValue("@id", s.StudentId);
-                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@userId", s.UserId);   
+                cmd.ExecuteNonQuery();
                 }
             }
 

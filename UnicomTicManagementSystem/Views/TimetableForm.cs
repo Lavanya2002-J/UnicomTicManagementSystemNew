@@ -106,7 +106,8 @@ namespace UnicomTicManagementSystem.Views
                 {
                     SubjectId = Convert.ToInt32(cmbSubject.SelectedValue),
                     RoomId = Convert.ToInt32(cmbRoom.SelectedValue),
-                    TimeSlot = txtTimeSlot.Text.Trim()
+                    TimeSlot = txtTimeSlot.Text.Trim(),
+                    Date = datePicker.Value.ToString("yyyy-MM-dd") 
                 };
 
                 timetableController.AddTimetable(newTimetable);
@@ -136,7 +137,8 @@ namespace UnicomTicManagementSystem.Views
                     TimetableId = selectedTimetableId,
                     SubjectId = Convert.ToInt32(cmbSubject.SelectedValue),
                     RoomId = Convert.ToInt32(cmbRoom.SelectedValue),
-                    TimeSlot = txtTimeSlot.Text.Trim()
+                    TimeSlot = txtTimeSlot.Text.Trim(),
+                    Date = datePicker.Value.ToString("yyyy-MM-dd") 
                 };
 
                 timetableController.UpdateTimetable(updatedTimetable);
@@ -173,7 +175,7 @@ namespace UnicomTicManagementSystem.Views
 
 
         private void btnView_Click(object sender, EventArgs e)
-        //  View Timetable (select from grid)
+       
 
         {
             if (dataGridViewTimetable.SelectedRows.Count > 0)
@@ -183,6 +185,7 @@ namespace UnicomTicManagementSystem.Views
                 cmbSubject.SelectedValue = Convert.ToInt32(row.Cells["SubjectID"].Value);
                 cmbRoom.SelectedValue = Convert.ToInt32(row.Cells["RoomID"].Value);
                 txtTimeSlot.Text = row.Cells["TimeSlot"].Value.ToString();
+                
             }
             else
             {
@@ -255,6 +258,11 @@ namespace UnicomTicManagementSystem.Views
         private void cmbSubject_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            string selectedDate = datePicker.Value.ToString("yyyy-MM-dd");
         }
     }
 }

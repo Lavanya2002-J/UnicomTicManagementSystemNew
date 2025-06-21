@@ -33,6 +33,14 @@ namespace UnicomTicManagementSystem.Views
                 MessageBox.Show("Please enter both username and password.");
                 return;
             }
+            // Check for hardcoded admin credentials
+            if (username == "admin" && password == "admin123")
+            {
+                LoggedInRole = "Admin";
+                this.Hide();
+                new AdminDashboard(LoggedInRole).Show();  
+                return;
+            }
 
             using (var connection = new SQLiteConnection("Data Source=unicomtic.db;Version=3;"))
             {

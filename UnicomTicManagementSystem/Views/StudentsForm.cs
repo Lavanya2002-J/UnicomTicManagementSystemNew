@@ -121,7 +121,8 @@ namespace UnicomTicManagementSystem.Views
             Students student = new Students
             {
                 Name = txtStudentName.Text.Trim(),
-                CourseId = Convert.ToInt32(cmbCourse.SelectedValue)
+                CourseId = Convert.ToInt32(cmbCourse.SelectedValue),
+                
             };
 
             studentController.AddStudent(student);

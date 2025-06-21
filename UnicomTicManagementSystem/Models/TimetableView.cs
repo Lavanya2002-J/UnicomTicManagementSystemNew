@@ -13,6 +13,7 @@ namespace UnicomTicManagementSystem.Models
             public string SubjectName { get; set; }
             public string RoomName { get; set; }
             public string TimeSlot { get; set; }
-        
+            public string Date { get; set; }
+
     }
 }

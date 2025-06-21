@@ -39,20 +39,38 @@ namespace UnicomTicManagementSystem.Views
         {
             if (dataGridViewUsers.SelectedRows.Count > 0)
             {
-                DataGridViewRow row = dataGridViewUsers.SelectedRows[0];
-                selectedUserId = Convert.ToInt32(row.Cells["UserID"].Value);
-                txtUsername.Text = row.Cells["Username"].Value.ToString();
-                textPassword.Text = row.Cells["Password"].Value.ToString();
-                cmbRole.SelectedItem = row.Cells["Role"].Value.ToString();
+                try
+                {
+                    DataGridViewRow row = dataGridViewUsers.SelectedRows[0];
+
+                    selectedUserId = Convert.ToInt32(row.Cells["UserID"].Value);
+                    txtUsername.Text = row.Cells["Username"].Value?.ToString() ?? "";
+                    textPassword.Text = row.Cells["Password"].Value?.ToString() ?? "";
+                    cmbRole.SelectedItem = row.Cells["Role"].Value?.ToString() ?? "";
+
+                    // Use safe optional access and ToString()
+                    txtEmail.Text = row.Cells["Email"].Value?.ToString() ?? "";
+                    txtPhone.Text = row.Cells["Phone"].Value?.ToString() ?? "";
+                    txtNIC.Text = row.Cells["NIC"].Value?.ToString() ?? "";
+                    cmbGender.SelectedItem = row.Cells["Gender"].Value?.ToString() ?? "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading user data: " + ex.Message);
+                }
             }
         }
 
-        private void ClearFields()
+     private void ClearFields()
         {
             txtUsername.Clear();
             textPassword.Clear();
             cmbRole.SelectedIndex = -1;
             selectedUserId = -1;
+            txtPhone.Clear();
+            txtEmail.Clear();
+            txtNIC.Clear();
+            cmbGender.SelectedIndex = -1;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -66,11 +84,24 @@ namespace UnicomTicManagementSystem.Views
         }
 
         private void UserManagementForm_Load(object sender, EventArgs e)
+        
         {
-            cmbRole.Items.AddRange(new string[] { "Admin", "Student", "Lecturer", "Staff" });
+            if (cmbRole.Items.Count == 0)  
+            {
+                cmbRole.Items.AddRange(new string[] { "Admin", "Student", "Lecturer", "Staff" });
+            }
+
+            if (cmbGender.Items.Count == 0)  
+            {
+                cmbGender.Items.AddRange(new string[] { "Male", "Female", "Other" });
+            }
+
             cmbRole.SelectedIndex = -1;
+            cmbGender.SelectedIndex = -1;
+
             LoadUsers();
         }
+        
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
@@ -79,23 +110,49 @@ namespace UnicomTicManagementSystem.Views
 
         private void btnAddUser_Click_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(textPassword.Text) || cmbRole.SelectedIndex == -1)
+            if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(textPassword.Text) || cmbRole.SelectedIndex == -1 ||
+                string.IsNullOrWhiteSpace(txtEmail.Text) || string.IsNullOrWhiteSpace(txtNIC.Text) || string.IsNullOrWhiteSpace(txtPhone.Text) || cmbGender.SelectedIndex == -1)
+                
             {
                 MessageBox.Show("Please fill all fields.");
                 return;
             }
 
+            // Simple input checks
+            if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
+            {
+                MessageBox.Show("Invalid email format.");
+                return;
+            }
+
+            if (txtPhone.Text.Length < 10)
+            {
+                MessageBox.Show("Phone number must be at least 10 digits.");
+                return;
+            }
+
+            if (txtNIC.Text.Length < 10)
+            {
+                MessageBox.Show("NIC must be at least 10 characters.");
+                return;
+            }
+
+
             Users user = new Users
             {
                 UserName = txtUsername.Text.Trim(),
                 Password = textPassword.Text.Trim(),
-                Role = cmbRole.SelectedItem.ToString()
+                Role = cmbRole.SelectedItem.ToString(),
+                Email = txtEmail.Text.Trim(),
+                Phone = txtPhone.Text.Trim(),
+                Gender = cmbGender.SelectedItem.ToString(),
+                NIC = txtNIC.Text.Trim(),
             };
 
             int userId = userController.AddUser(user);
             MessageBox.Show("User added successfully!");
 
-            // ✅ Only for students
+            // Only for students
             if (user.Role == "Student")
             {
                 Students student = new Students
@@ -146,7 +203,9 @@ namespace UnicomTicManagementSystem.Views
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(textPassword.Text) || cmbRole.SelectedIndex == -1)
+            if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(textPassword.Text) || cmbRole.SelectedIndex == -1 ||
+                string.IsNullOrWhiteSpace(txtEmail.Text) || string.IsNullOrWhiteSpace(txtNIC.Text) || string.IsNullOrWhiteSpace(txtPhone.Text) || cmbGender.SelectedIndex == -1)
+
             {
                 MessageBox.Show("Please fill all the fields.");
                 return;
@@ -157,7 +216,11 @@ namespace UnicomTicManagementSystem.Views
                 UserId = selectedUserId,
                 UserName = txtUsername.Text.Trim(),
                 Password = textPassword.Text.Trim(),
-                Role = cmbRole.SelectedItem.ToString()
+                Role = cmbRole.SelectedItem.ToString(),
+                Email = txtEmail.Text.Trim(),
+                Phone = txtPhone.Text.Trim(),
+                Gender = cmbGender.SelectedItem.ToString(),
+                NIC = txtPhone.Text.Trim(),
             };
 
             userController.UpdateUser(user);
@@ -173,6 +236,17 @@ namespace UnicomTicManagementSystem.Views
             dashboard.ShowDialog();
 
         }
+
+        private void labelNic_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
     
     
