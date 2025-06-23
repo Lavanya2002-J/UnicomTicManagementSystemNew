@@ -158,13 +158,13 @@ namespace UnicomTicManagementSystem.Views
                 Students student = new Students
                 {
                     Name = user.UserName,
-                    UserId = userId,
-                    CourseId = 1  // Default course
+                    UserId = userId
+                    
                 };
 
                 StudentController sc = new StudentController();
                 sc.AddStudent(student);
-                MessageBox.Show("Student profile created.");
+                MessageBox.Show("Student profile created,please update other details.");
             }
 
             ClearFields();
@@ -220,7 +220,7 @@ namespace UnicomTicManagementSystem.Views
                 Email = txtEmail.Text.Trim(),
                 Phone = txtPhone.Text.Trim(),
                 Gender = cmbGender.SelectedItem.ToString(),
-                NIC = txtPhone.Text.Trim(),
+                NIC = txtNIC.Text.Trim(),
             };
 
             userController.UpdateUser(user);
