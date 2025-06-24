@@ -47,6 +47,8 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.labelGender = new System.Windows.Forms.Label();
             this.cmbGender = new System.Windows.Forms.ComboBox();
+            this.labelCourse = new System.Windows.Forms.Label();
+            this.cmbCourse = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +74,7 @@
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(216, 36);
             this.cmbRole.TabIndex = 2;
+            this.cmbRole.SelectedIndexChanged += new System.EventHandler(this.cmbRole_SelectedIndexChanged);
             // 
             // labelUserName
             // 
@@ -224,11 +227,31 @@
             this.cmbGender.Size = new System.Drawing.Size(214, 36);
             this.cmbGender.TabIndex = 18;
             // 
+            // labelCourse
+            // 
+            this.labelCourse.AutoSize = true;
+            this.labelCourse.Location = new System.Drawing.Point(542, 251);
+            this.labelCourse.Name = "labelCourse";
+            this.labelCourse.Size = new System.Drawing.Size(81, 28);
+            this.labelCourse.TabIndex = 19;
+            this.labelCourse.Text = "Course:";
+            // 
+            // cmbCourse
+            // 
+            this.cmbCourse.FormattingEnabled = true;
+            this.cmbCourse.Location = new System.Drawing.Point(731, 251);
+            this.cmbCourse.Name = "cmbCourse";
+            this.cmbCourse.Size = new System.Drawing.Size(205, 36);
+            this.cmbCourse.TabIndex = 20;
+            this.cmbCourse.SelectedIndexChanged += new System.EventHandler(this.cmbCourse_SelectedIndexChanged);
+            // 
             // UserManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 630);
+            this.Controls.Add(this.cmbCourse);
+            this.Controls.Add(this.labelCourse);
             this.Controls.Add(this.cmbGender);
             this.Controls.Add(this.labelGender);
             this.Controls.Add(this.txtPhone);
@@ -280,5 +303,7 @@
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label labelGender;
         private System.Windows.Forms.ComboBox cmbGender;
+        private System.Windows.Forms.Label labelCourse;
+        private System.Windows.Forms.ComboBox cmbCourse;
     }
 }

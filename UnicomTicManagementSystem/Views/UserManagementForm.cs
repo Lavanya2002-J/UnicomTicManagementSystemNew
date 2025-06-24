@@ -15,6 +15,7 @@ namespace UnicomTicManagementSystem.Views
     public partial class UserManagementForm : Form
     {
         private readonly UserController userController = new UserController();
+        private readonly CourseController courseController = new CourseController();
         private int selectedUserId = -1;
 
         public UserManagementForm()
@@ -71,6 +72,8 @@ namespace UnicomTicManagementSystem.Views
             txtEmail.Clear();
             txtNIC.Clear();
             cmbGender.SelectedIndex = -1;
+            cmbCourse.SelectedIndex = -1; // Clear course selection
+            cmbCourse.Visible = true; // Ensure course dropdown is visible
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -99,9 +102,17 @@ namespace UnicomTicManagementSystem.Views
             cmbRole.SelectedIndex = -1;
             cmbGender.SelectedIndex = -1;
 
-            LoadUsers();
-        }
+            
         
+        var courses = courseController.GetCourses(); 
+        cmbCourse.DataSource = courses;
+        cmbCourse.DisplayMember = "CourseName"; 
+        cmbCourse.ValueMember = "CourseID";
+        cmbCourse.SelectedIndex = -1;
+        cmbCourse.Visible = false; 
+        LoadUsers();
+        }
+
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
@@ -136,6 +147,16 @@ namespace UnicomTicManagementSystem.Views
                 MessageBox.Show("NIC must be at least 10 characters.");
                 return;
             }
+            string role = cmbRole.SelectedItem?.ToString();
+
+            // Validate course ONLY for student and lecturer
+            if ((role == "Student" || role == "Lecturer") && cmbCourse.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a course for the " + role + ".", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
 
 
             Users user = new Users
@@ -158,13 +179,52 @@ namespace UnicomTicManagementSystem.Views
                 Students student = new Students
                 {
                     Name = user.UserName,
-                    UserId = userId
-                    
+                    UserId = userId,
+                    CourseId = Convert.ToInt32(cmbCourse.SelectedValue) // Assuming cmbCourse is visible and has a selected value
+
                 };
 
                 StudentController sc = new StudentController();
                 sc.AddStudent(student);
-                MessageBox.Show("Student profile created,please update other details.");
+                MessageBox.Show("Student profile created.");
+            }
+
+            else if (user.Role == "Lecturer")
+            {
+                Lecturer lecturer = new Lecturer
+                {
+                    Name = user.UserName,
+                    UserId = userId,
+                    CourseId = Convert.ToInt32(cmbCourse.SelectedValue) // Assuming cmbCourse is visible and has a selected value
+
+                };
+                LecturerController l = new LecturerController();
+                l.AddLecturer(lecturer);
+                MessageBox.Show("Lecturer profile created.");
+            }
+            else if (user.Role == "Staff")
+            {
+                Staff staff = new Staff
+                {
+                    Name = user.UserName,
+                    UserId = userId
+                };
+
+                StaffController staffController = new StaffController();
+                staffController.AddStaff(staff);
+                MessageBox.Show("Staff profile created.");
+            }
+            else if (user.Role == "Admin")
+            {
+                Admin admin = new Admin
+                {
+                    Name = user.UserName,
+                    UserId = userId
+                };
+
+                AdminController adminController = new AdminController();
+                adminController.AddAdmin(admin);
+                MessageBox.Show("Admin profile created.");
             }
 
             ClearFields();
@@ -247,7 +307,32 @@ namespace UnicomTicManagementSystem.Views
 
         }
 
+        private void cmbCourse_SelectedIndexChanged(object sender, EventArgs e)
+
+        {
+            
+        }
+
+        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
+        
+        {
+            string selectedRole = cmbRole.SelectedItem?.ToString();
+
+            if (selectedRole == "Student" || selectedRole == "Lecturer")
+            {
+                cmbCourse.Visible = true;
+                cmbCourse.Enabled = true;
+            }
+            else
+            {
+                cmbCourse.Visible = true; // or false if you want to hide it for others
+                cmbCourse.Enabled = false;
+                cmbCourse.SelectedIndex = -1;
+            }
+        }
+    }
     }
     
     
-}
+    
+    

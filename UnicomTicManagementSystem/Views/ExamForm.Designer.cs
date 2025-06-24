@@ -46,7 +46,7 @@
             this.labelExamName.AutoSize = true;
             this.labelExamName.Location = new System.Drawing.Point(144, 66);
             this.labelExamName.Name = "labelExamName";
-            this.labelExamName.Size = new System.Drawing.Size(45, 19);
+            this.labelExamName.Size = new System.Drawing.Size(66, 30);
             this.labelExamName.TabIndex = 0;
             this.labelExamName.Text = "Exam";
             // 
@@ -54,7 +54,7 @@
             // 
             this.txtExameName.Location = new System.Drawing.Point(323, 66);
             this.txtExameName.Name = "txtExameName";
-            this.txtExameName.Size = new System.Drawing.Size(229, 26);
+            this.txtExameName.Size = new System.Drawing.Size(229, 35);
             this.txtExameName.TabIndex = 1;
             // 
             // labelSubject
@@ -62,7 +62,7 @@
             this.labelSubject.AutoSize = true;
             this.labelSubject.Location = new System.Drawing.Point(144, 150);
             this.labelSubject.Name = "labelSubject";
-            this.labelSubject.Size = new System.Drawing.Size(58, 19);
+            this.labelSubject.Size = new System.Drawing.Size(86, 30);
             this.labelSubject.TabIndex = 2;
             this.labelSubject.Text = "Subject";
             // 
@@ -71,7 +71,7 @@
             this.cmbSubject.FormattingEnabled = true;
             this.cmbSubject.Location = new System.Drawing.Point(323, 142);
             this.cmbSubject.Name = "cmbSubject";
-            this.cmbSubject.Size = new System.Drawing.Size(229, 27);
+            this.cmbSubject.Size = new System.Drawing.Size(229, 36);
             this.cmbSubject.TabIndex = 3;
             // 
             // dataGridViewExams
@@ -130,7 +130,7 @@
             // 
             this.btnBack.Location = new System.Drawing.Point(801, 539);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 32);
+            this.btnBack.Size = new System.Drawing.Size(96, 32);
             this.btnBack.TabIndex = 9;
             this.btnBack.Text = "BACK";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -138,7 +138,7 @@
             // 
             // ExamForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 647);
             this.Controls.Add(this.btnBack);

@@ -55,6 +55,9 @@ namespace UnicomTicManagementSystem.Views
                 
                 dataGridViewTimetable.Visible = true;
                 btnBack.Visible = true;
+
+                labelDate.Visible = false;
+                datePicker.Visible = false;
             }
         }
         

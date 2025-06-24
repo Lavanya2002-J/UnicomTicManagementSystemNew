@@ -175,3 +175,6 @@ C:\Safezone\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\Uni
 C:\Safezone\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTi.5B6226AA.Up2Date
 C:\Safezone\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.exe
 C:\Safezone\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.pdb
+C:\Safezone\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.LecturerForm.resources
+C:\Safezone\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.AdminForm.resources
+C:\Safezone\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StaffForm.resources

@@ -45,7 +45,7 @@
             this.labelCourseName.Location = new System.Drawing.Point(196, 93);
             this.labelCourseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCourseName.Name = "labelCourseName";
-            this.labelCourseName.Size = new System.Drawing.Size(55, 19);
+            this.labelCourseName.Size = new System.Drawing.Size(80, 30);
             this.labelCourseName.TabIndex = 0;
             this.labelCourseName.Text = "Course";
             // 
@@ -53,7 +53,7 @@
             // 
             this.txtCourseName.Location = new System.Drawing.Point(353, 90);
             this.txtCourseName.Name = "txtCourseName";
-            this.txtCourseName.Size = new System.Drawing.Size(247, 26);
+            this.txtCourseName.Size = new System.Drawing.Size(247, 35);
             this.txtCourseName.TabIndex = 1;
             // 
             // dataGridViewCourses
@@ -111,7 +111,7 @@
             // 
             this.btnBack.Location = new System.Drawing.Point(804, 553);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 32);
+            this.btnBack.Size = new System.Drawing.Size(86, 32);
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "BACK";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -119,7 +119,7 @@
             // 
             // CoursesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 647);
             this.Controls.Add(this.btnBack);

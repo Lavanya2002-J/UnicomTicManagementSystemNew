@@ -65,11 +65,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\ExamController.cs" />
+    <Compile Include="Controllers\LecturerController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MarkController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
+    <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Controllers\TimetableController.cs" />
@@ -80,10 +83,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Courses.cs" />
     <Compile Include="Models\Exams.cs" />
+    <Compile Include="Models\Lecturer.cs" />
     <Compile Include="Models\Marks.cs" />
     <Compile Include="Models\Rooms.cs" />
+    <Compile Include="Models\Staff.cs" />
     <Compile Include="Models\Students.cs" />
     <Compile Include="Models\Subjects.cs" />
     <Compile Include="Models\Timetables.cs" />
@@ -99,6 +105,12 @@
     <Compile Include="Views\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CoursesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +122,12 @@
     </Compile>
     <Compile Include="Views\ExamForm.Designer.cs">
       <DependentUpon>ExamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LecturerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LecturerForm.Designer.cs">
+      <DependentUpon>LecturerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginForm.cs">
       <SubType>Form</SubType>
@@ -128,6 +146,12 @@
     </Compile>
     <Compile Include="Views\RoomsForm.Designer.cs">
       <DependentUpon>RoomsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StaffForm.Designer.cs">
+      <DependentUpon>StaffForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\StudentsForm.cs">
       <SubType>Form</SubType>
@@ -172,11 +196,17 @@
     <EmbeddedResource Include="Views\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CoursesForm.resx">
       <DependentUpon>CoursesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ExamForm.resx">
       <DependentUpon>ExamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LecturerForm.resx">
+      <DependentUpon>LecturerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -186,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\RoomsForm.resx">
       <DependentUpon>RoomsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StaffForm.resx">
+      <DependentUpon>StaffForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StudentsForm.resx">
       <DependentUpon>StudentsForm.cs</DependentUpon>

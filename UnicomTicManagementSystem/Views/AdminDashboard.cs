@@ -131,6 +131,9 @@ namespace UnicomTicManagementSystem.Views
                 btnStudents.Visible = false;
                 btnViewExam.Visible = false;
                 btnViewRooms.Visible = false;
+                btnLecturer.Visible = false;
+                btnViewStaff.Visible = false;
+                btnViewAdmin.Visible = false;
 
                 label1.Text = "WELCOME STUDENT";
             }
@@ -142,6 +145,9 @@ namespace UnicomTicManagementSystem.Views
                 btnStudents.Visible = false;
                 btnViewRooms.Visible = false;
                 btnViewExam.Visible=false;
+                btnLecturer.Visible = false;
+                btnViewAdmin.Visible = false;
+                btnViewStaff.Visible = false;
 
                 label1.Text = "WELCOME LECTURER";
             }
@@ -151,6 +157,9 @@ namespace UnicomTicManagementSystem.Views
                 btnSubjects.Visible = false;
                 btnViewExam.Visible = false;
                 btnViewMarks.Visible = false;
+                btnLecturer.Visible = false;
+                btnViewAdmin.Visible = false;
+                btnViewStaff.Visible = false;
 
                 label1.Text = "WELCOME STAFF";
             }
@@ -160,6 +169,26 @@ namespace UnicomTicManagementSystem.Views
             }
         }
 
+        private void btnLecturer_Click(object sender, EventArgs e)
+        {
+            LecturerForm form = new LecturerForm();
+            form.Show(); 
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminForm form = new AdminForm();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnViewStaff_Click(object sender, EventArgs e)
+        {
+            StaffForm form = new StaffForm();
+            form.Show();
+            this.Hide();
+        }
     }
     
 }

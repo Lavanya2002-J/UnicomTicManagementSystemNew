@@ -75,6 +75,24 @@ namespace UnicomTicManagementSystem.Repositories
                     RoomID INTEGER,
                     DATE TEXT
                 );";
+                string LecturerTable = @"CREATE TABLE IF NOT EXISTS Lecturer (
+                    LecturerID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Name TEXT,
+                    CourseID INTEGER,
+                    UserID INTEGER
+                );";
+                string AdminTable = @"CREATE TABLE IF NOT EXISTS Admin (
+                 AdminID INTEGER PRIMARY KEY AUTOINCREMENT,
+                Name TEXT,
+                UserId INTEGER
+                );";
+
+                string StaffTable = @"CREATE TABLE IF NOT EXISTS Staff (
+                StaffID INTEGER PRIMARY KEY AUTOINCREMENT,
+                Name TEXT,
+                UserId INTEGER
+                );";
+
 
                 ExecuteCommand(usersTable, connection);
                 ExecuteCommand(coursesTable, connection);
@@ -84,6 +102,9 @@ namespace UnicomTicManagementSystem.Repositories
                 ExecuteCommand(marksTable, connection);
                 ExecuteCommand(roomsTable, connection);
                 ExecuteCommand(timetableTable, connection);
+                ExecuteCommand(LecturerTable, connection);
+                ExecuteCommand(AdminTable, connection);
+                ExecuteCommand(StaffTable, connection);
             }
         }
             private static void ExecuteCommand(string commandText, SQLiteConnection connection)
