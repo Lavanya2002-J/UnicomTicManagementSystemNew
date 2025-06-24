@@ -47,28 +47,7 @@ namespace UnicomTicManagementSystem.Views
 
 
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            string lecturerName = txtName.Text.Trim();
-            if (string.IsNullOrWhiteSpace(lecturerName))
-            {
-                MessageBox.Show("Please enter lecturer's name.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            Lecturer lecturer = new Lecturer
-            {
-                Name = lecturerName,
-                CourseId = Convert.ToInt32(cmbCourse.SelectedValue),
-                
-            };
-
-            lecturerController.AddLecturer(lecturer);
-            MessageBox.Show("Lecturer added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            LoadLecturer();
-            ClearFields();
-        }
-
+       
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (selectedLecturerId == -1)

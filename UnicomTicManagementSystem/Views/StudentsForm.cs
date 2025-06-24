@@ -109,30 +109,7 @@ namespace UnicomTicManagementSystem.Views
 
         }
 
-        private void btnAddStudents_Click(object sender, EventArgs e)
-        {
-            string studentName = txtStudentName.Text.Trim();
-            if (string.IsNullOrWhiteSpace(txtStudentName.Text))
-            {
-                MessageBox.Show("Please enter a student's name.","Input required",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                return;
-            }
-
-            Students student = new Students
-            {
-                Name = txtStudentName.Text.Trim(),
-                CourseId = Convert.ToInt32(cmbCourse.SelectedValue),
-                
-            };
-
-            studentController.AddStudent(student);
-            MessageBox.Show("Student added successfully","Success",
-            MessageBoxButtons.OK,
-            MessageBoxIcon.Information);
-            LoadStudents();
-            ClearFields();
-        }
-
+        
         
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)

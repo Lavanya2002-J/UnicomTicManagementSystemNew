@@ -178,3 +178,36 @@ C:\Safezone\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\Uni
 C:\Safezone\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.LecturerForm.resources
 C:\Safezone\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.AdminForm.resources
 C:\Safezone\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StaffForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\UnicomTicManagementSystem.exe.config
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\UnicomTicManagementSystem.exe
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\UnicomTicManagementSystem.pdb
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\EntityFramework.dll
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\EntityFramework.SqlServer.dll
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\System.Data.SQLite.dll
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\EntityFramework.xml
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\EntityFramework.SqlServer.xml
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\bin\Debug\System.Data.SQLite.xml
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.csproj.AssemblyReference.cache
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.exe.config
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Properties.Resources.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.AdminDashboard.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.AdminForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.CoursesForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.ExamForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.LecturerForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.LoginForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.MarksForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.RoomsForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StaffForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StudentsForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.StudentViewMarksForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.SubjectsForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.TimetableForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.Views.UserManagementForm.resources
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.csproj.GenerateResource.cache
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.csproj.CoreCompileInputs.cache
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTi.5B6226AA.Up2Date
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.exe
+D:\Final push\UnicomTicManagementSystemNew\UnicomTicManagementSystem\obj\Debug\UnicomTicManagementSystem.pdb

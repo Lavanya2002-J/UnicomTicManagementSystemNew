@@ -45,7 +45,7 @@
             // 
             // btnCourses
             // 
-            this.btnCourses.Location = new System.Drawing.Point(396, 108);
+            this.btnCourses.Location = new System.Drawing.Point(397, 99);
             this.btnCourses.Margin = new System.Windows.Forms.Padding(4);
             this.btnCourses.Name = "btnCourses";
             this.btnCourses.Size = new System.Drawing.Size(190, 32);
@@ -56,7 +56,7 @@
             // 
             // btnSubjects
             // 
-            this.btnSubjects.Location = new System.Drawing.Point(396, 169);
+            this.btnSubjects.Location = new System.Drawing.Point(394, 156);
             this.btnSubjects.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubjects.Name = "btnSubjects";
             this.btnSubjects.Size = new System.Drawing.Size(190, 32);
@@ -67,7 +67,7 @@
             // 
             // btnStudents
             // 
-            this.btnStudents.Location = new System.Drawing.Point(396, 226);
+            this.btnStudents.Location = new System.Drawing.Point(393, 214);
             this.btnStudents.Margin = new System.Windows.Forms.Padding(4);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Size = new System.Drawing.Size(190, 32);
@@ -78,7 +78,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(393, 717);
+            this.btnLogout.Location = new System.Drawing.Point(393, 697);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(190, 37);
@@ -99,7 +99,7 @@
             // 
             // btnViewExam
             // 
-            this.btnViewExam.Location = new System.Drawing.Point(394, 278);
+            this.btnViewExam.Location = new System.Drawing.Point(393, 270);
             this.btnViewExam.Name = "btnViewExam";
             this.btnViewExam.Size = new System.Drawing.Size(190, 37);
             this.btnViewExam.TabIndex = 5;
@@ -109,7 +109,7 @@
             // 
             // btnViewMarks
             // 
-            this.btnViewMarks.Location = new System.Drawing.Point(396, 345);
+            this.btnViewMarks.Location = new System.Drawing.Point(396, 336);
             this.btnViewMarks.Name = "btnViewMarks";
             this.btnViewMarks.Size = new System.Drawing.Size(190, 33);
             this.btnViewMarks.TabIndex = 6;
@@ -119,7 +119,7 @@
             // 
             // btnViewTimetable
             // 
-            this.btnViewTimetable.Location = new System.Drawing.Point(397, 475);
+            this.btnViewTimetable.Location = new System.Drawing.Point(396, 459);
             this.btnViewTimetable.Name = "btnViewTimetable";
             this.btnViewTimetable.Size = new System.Drawing.Size(190, 34);
             this.btnViewTimetable.TabIndex = 7;
@@ -129,7 +129,7 @@
             // 
             // btnViewRooms
             // 
-            this.btnViewRooms.Location = new System.Drawing.Point(397, 410);
+            this.btnViewRooms.Location = new System.Drawing.Point(396, 394);
             this.btnViewRooms.Name = "btnViewRooms";
             this.btnViewRooms.Size = new System.Drawing.Size(190, 35);
             this.btnViewRooms.TabIndex = 8;
@@ -139,7 +139,7 @@
             // 
             // btnManageUsers
             // 
-            this.btnManageUsers.Location = new System.Drawing.Point(396, 50);
+            this.btnManageUsers.Location = new System.Drawing.Point(393, 45);
             this.btnManageUsers.Name = "btnManageUsers";
             this.btnManageUsers.Size = new System.Drawing.Size(190, 36);
             this.btnManageUsers.TabIndex = 9;
@@ -149,7 +149,7 @@
             // 
             // btnLecturer
             // 
-            this.btnLecturer.Location = new System.Drawing.Point(397, 539);
+            this.btnLecturer.Location = new System.Drawing.Point(397, 526);
             this.btnLecturer.Name = "btnLecturer";
             this.btnLecturer.Size = new System.Drawing.Size(189, 31);
             this.btnLecturer.TabIndex = 10;
@@ -159,7 +159,7 @@
             // 
             // btnViewAdmin
             // 
-            this.btnViewAdmin.Location = new System.Drawing.Point(397, 601);
+            this.btnViewAdmin.Location = new System.Drawing.Point(395, 576);
             this.btnViewAdmin.Name = "btnViewAdmin";
             this.btnViewAdmin.Size = new System.Drawing.Size(189, 34);
             this.btnViewAdmin.TabIndex = 11;
@@ -169,7 +169,7 @@
             // 
             // btnViewStaff
             // 
-            this.btnViewStaff.Location = new System.Drawing.Point(397, 662);
+            this.btnViewStaff.Location = new System.Drawing.Point(395, 637);
             this.btnViewStaff.Name = "btnViewStaff";
             this.btnViewStaff.Size = new System.Drawing.Size(189, 31);
             this.btnViewStaff.TabIndex = 12;

@@ -33,7 +33,6 @@
             this.txtStudentName = new System.Windows.Forms.TextBox();
             this.cmbCourse = new System.Windows.Forms.ComboBox();
             this.dataGridViewStudents = new System.Windows.Forms.DataGridView();
-            this.btnAddStudents = new System.Windows.Forms.Button();
             this.btnEditStudent = new System.Windows.Forms.Button();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
@@ -47,7 +46,7 @@
             this.labelStudentName.Location = new System.Drawing.Point(153, 67);
             this.labelStudentName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStudentName.Name = "labelStudentName";
-            this.labelStudentName.Size = new System.Drawing.Size(100, 19);
+            this.labelStudentName.Size = new System.Drawing.Size(142, 28);
             this.labelStudentName.TabIndex = 0;
             this.labelStudentName.Text = "StudentName";
             this.labelStudentName.Click += new System.EventHandler(this.labelStudentName_Click);
@@ -58,7 +57,7 @@
             this.labelCourse.Location = new System.Drawing.Point(153, 156);
             this.labelCourse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCourse.Name = "labelCourse";
-            this.labelCourse.Size = new System.Drawing.Size(55, 19);
+            this.labelCourse.Size = new System.Drawing.Size(76, 28);
             this.labelCourse.TabIndex = 1;
             this.labelCourse.Text = "Course";
             this.labelCourse.Click += new System.EventHandler(this.labelCourse_Click);
@@ -68,7 +67,7 @@
             this.txtStudentName.Location = new System.Drawing.Point(333, 67);
             this.txtStudentName.Margin = new System.Windows.Forms.Padding(4);
             this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(315, 25);
+            this.txtStudentName.Size = new System.Drawing.Size(315, 34);
             this.txtStudentName.TabIndex = 2;
             this.txtStudentName.TextChanged += new System.EventHandler(this.txtStudentName_TextChanged);
             // 
@@ -78,7 +77,7 @@
             this.cmbCourse.Location = new System.Drawing.Point(333, 153);
             this.cmbCourse.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCourse.Name = "cmbCourse";
-            this.cmbCourse.Size = new System.Drawing.Size(315, 25);
+            this.cmbCourse.Size = new System.Drawing.Size(315, 36);
             this.cmbCourse.TabIndex = 3;
             this.cmbCourse.SelectedIndexChanged += new System.EventHandler(this.cmbCourse_SelectedIndexChanged);
             // 
@@ -103,20 +102,9 @@
             this.dataGridViewStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStudents_CellContentClick);
             this.dataGridViewStudents.SelectionChanged += new System.EventHandler(this.dataGridViewStudents_SelectionChanged);
             // 
-            // btnAddStudents
-            // 
-            this.btnAddStudents.Location = new System.Drawing.Point(84, 525);
-            this.btnAddStudents.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddStudents.Name = "btnAddStudents";
-            this.btnAddStudents.Size = new System.Drawing.Size(100, 32);
-            this.btnAddStudents.TabIndex = 5;
-            this.btnAddStudents.Text = "ADD";
-            this.btnAddStudents.UseVisualStyleBackColor = true;
-            this.btnAddStudents.Click += new System.EventHandler(this.btnAddStudents_Click);
-            // 
             // btnEditStudent
             // 
-            this.btnEditStudent.Location = new System.Drawing.Point(313, 525);
+            this.btnEditStudent.Location = new System.Drawing.Point(204, 546);
             this.btnEditStudent.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditStudent.Name = "btnEditStudent";
             this.btnEditStudent.Size = new System.Drawing.Size(100, 32);
@@ -127,7 +115,7 @@
             // 
             // btnDeleteStudent
             // 
-            this.btnDeleteStudent.Location = new System.Drawing.Point(522, 525);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(397, 546);
             this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(100, 32);
@@ -138,7 +126,7 @@
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(712, 525);
+            this.btnView.Location = new System.Drawing.Point(597, 546);
             this.btnView.Margin = new System.Windows.Forms.Padding(4);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(100, 32);
@@ -149,7 +137,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(878, 525);
+            this.btnBack.Location = new System.Drawing.Point(785, 546);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(89, 37);
             this.btnBack.TabIndex = 9;
@@ -159,14 +147,13 @@
             // 
             // StudentsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 630);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnDeleteStudent);
             this.Controls.Add(this.btnEditStudent);
-            this.Controls.Add(this.btnAddStudents);
             this.Controls.Add(this.dataGridViewStudents);
             this.Controls.Add(this.cmbCourse);
             this.Controls.Add(this.txtStudentName);
@@ -190,7 +177,6 @@
         private System.Windows.Forms.TextBox txtStudentName;
         private System.Windows.Forms.ComboBox cmbCourse;
         private System.Windows.Forms.DataGridView dataGridViewStudents;
-        private System.Windows.Forms.Button btnAddStudents;
         private System.Windows.Forms.Button btnEditStudent;
         private System.Windows.Forms.Button btnDeleteStudent;
         private System.Windows.Forms.Button btnView;
